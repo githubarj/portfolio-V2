@@ -1,50 +1,56 @@
 /* ===================================container============================================= */
 .hello-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    gap: 56px;
-    flex-grow: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 56px;
+  flex-grow: 1;
 }
 
 /* ===============================================Intro=============================== */
 
 .intro-container {
-    display: flex;
-    flex-direction: column;
-    gap: 81px;
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
 }
 
-.intro-header .greeting{
-    color: var(--secondary-white);
+.intro-header .greeting {
+  color: var(--secondary-white);
 }
 
-.intro-header .proffesion{
-    color: var(--secondary-blue);
+.intro-header .proffesion {
+  color: var(--secondary-blue);
 }
 
-.intro-more{
-    display: flex;
-    flex-direction: column;
-    gap: 9.67px;
+.intro-more {
+  display: flex;
+  flex-direction: column;
+  gap: 9.67px;
 }
 
-.intro-equals{
-    color: var(--secondary-white);
+.intro-equals {
+  color: var(--secondary-white);
 }
-
 .const {
-    color: var(--secondary-blue);
+  color: var(--secondary-blue);
 }
 
-.githubLink{
-    color: var(--accent-teal);
+.githubLink {
+  color: var(--accent-teal);
 }
 .intro-equals q {
-    color: var(--accent-peach);
+  color: var(--accent-peach);
 }
 
-.intro-equals q:hover{
-    color: var(--accent-purple);
+.intro-equals q:hover {
+  color: var(--accent-purple);
+}
+
+
+/* ===========================Game================================================ */
+.game-container{
+    width: 402px;
+    flex-shrink:0 ;
 }

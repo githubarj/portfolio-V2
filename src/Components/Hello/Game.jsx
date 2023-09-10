@@ -1,7 +1,9 @@
 import "./hello.css"
 function Game() {
   return (
-    <div>Game</div>
+    <div className="game-container">
+
+    </div>
   )
 }
 

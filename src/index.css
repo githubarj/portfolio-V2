@@ -42,6 +42,11 @@ body::-webkit-scrollbar {
 
 /* ==================================Reusable CSS classes===================================== */
 
+/* page */
+.page {
+  padding: 0px 16.5px ;
+}
+
 /* Text */
 
 .headline-text {

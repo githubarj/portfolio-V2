@@ -4,7 +4,7 @@ import "./hello.css"
 
 function Hello() {
   return (
-    <div className="hello-container">
+    <div className="hello-container page">
       <Intro />
       <Game/>
     </div>
