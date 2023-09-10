@@ -1,0 +1,36 @@
+.footer-container {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--secondary-steel-blue);
+}
+
+.footer-links {
+  display: inline-flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.footer-links p {
+  height: 100%;
+  padding: 17.5px 16.5px;
+  border-right: 1px solid var(--secondary-steel-blue);
+}
+
+.footer-links a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 17.5px 14px;
+  border-right: 1px solid var(--secondary-steel-blue);
+}
+
+.footer-github a {
+  padding: 14px 16.5px;
+  border-left: 1px solid var(--secondary-steel-blue);
+  display: flex;
+  align-items: center;
+  gap: 3.5px;
+}
