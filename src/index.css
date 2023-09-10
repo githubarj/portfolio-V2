@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--secondary-white);
+  color: var(--secondary-steel-blue);
   font-family: Fira Code;
   font-style: normal;
   font-weight: 450;
@@ -11,10 +11,9 @@
   text-decoration: none;
 }
 
-body::-webkit-scrollbar{
-    display: none;
-  }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 
 :root {
   /* primary colors */
@@ -45,9 +44,9 @@ body::-webkit-scrollbar{
 
 /* Text */
 
-
 .headline-text {
   font-size: 2.783rem;
+  color: var(--secondary-white);
 }
 
 .subheadline-text {
@@ -56,7 +55,6 @@ body::-webkit-scrollbar{
 
 .body-text {
   font-size: 0.808rem;
-  color: var(--secondary-steel-blue);
 }
 
 .labels-text {
@@ -66,8 +64,6 @@ body::-webkit-scrollbar{
 .code-snippets-text {
   font-size: 0.629rem;
 }
-
-
 
 /* Buttons */
 
@@ -110,4 +106,3 @@ button {
 .container {
   display: flex;
 }
-

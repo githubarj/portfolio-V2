@@ -2,10 +2,10 @@ import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./Components/NavBar/Navbar"
 import Footer from "./Components/Footer/Footer"
-import Hello from "./Routes/Hello";
-import AboutMe from "./Routes/AboutMe";
-import Projects from "./Routes/Projects";
-import ContactMe from "./Routes/ContactMe";
+import Hello from "./Components/Hello/Hello";
+import AboutMe from "./Components/AboutMe/AboutMe";
+import Projects from "./Components/Projects/Projects";
+import ContactMe from "./Components/ContactMe/ContactMe";
 
 function App() {
   const location = useLocation();
