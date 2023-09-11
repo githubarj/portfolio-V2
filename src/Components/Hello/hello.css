@@ -42,6 +42,7 @@
 }
 .intro-equals q {
   color: var(--accent-peach);
+  transition: color 0.5s ease-in-out;
 }
 
 .intro-equals q:hover {

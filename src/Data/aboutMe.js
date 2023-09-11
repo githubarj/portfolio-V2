@@ -13,9 +13,11 @@ const filterIcons = [
   },
 ];
 
+
+
 const menus = [
   {
-    id:1,
+    id: 1,
     heading: "personal-info",
     menuItems: [
       {
@@ -33,7 +35,7 @@ const menus = [
         ],
       },
       {
-        icon: "/public/icons/interests.png",
+        icon: "/icons/interests.png",
         text: "experience",
         context: [
           {
@@ -59,7 +61,7 @@ const menus = [
         ],
       },
       {
-        icon: "/public/icons/education.png",
+        icon: "/icons/education.png",
         text: "education",
         context: [
           {
@@ -82,21 +84,24 @@ const menus = [
   {
     id: 2,
     heading: "contacts",
-    display: "none",
+
     menuItems: [
       {
         icon: "/icons/mail.png",
         text: "gitihuba9520@gmail.com",
+        display: "none",
         context: [],
       },
       {
-        icon: "/public/icons/phone.png",
+        icon: "/icons/phone.png",
         text: "+254798320724",
+        display: "none",
         context: [],
       },
       {
-        icon: "/public/icons/whatsapp.png",
+        icon: "/icons/whatsapp.png",
         text: "+254798320724",
+        display: "none",
         context: [],
       },
     ],

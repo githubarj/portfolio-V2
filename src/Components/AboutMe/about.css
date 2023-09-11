@@ -69,6 +69,7 @@
 
 .arrow-icon {
     align-self: flex-start;
+    transition: rotate 0.3s ease-in-out;
 }
 
 .option-main, .menu-context {
@@ -89,12 +90,16 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    
 }
 
 .context-menu-options{
     display: none;
     flex-direction: column;
+    
     gap: 2px;
+    
+   
 }
 
 
@@ -105,6 +110,13 @@
 
 .show-context{
     display: flex;
+    opacity: 0;
+     transition: opacity 0.5s ;
+   
+}
+
+.context-appear{
+    opacity: 1;
 }
 
 /* wholemenu apeearing  */

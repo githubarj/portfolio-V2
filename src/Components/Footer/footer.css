@@ -26,6 +26,7 @@
   align-items: center;
   padding: 17.5px 14px;
   border-right: 1px solid var(--secondary-steel-blue);
+  transition: opacity 0.3s ease-in-out;
 }
 
 .footer-links a:hover{
