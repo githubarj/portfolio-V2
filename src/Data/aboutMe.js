@@ -33,7 +33,7 @@ const menus = [
         ],
       },
       {
-        icon: "/public/icons/interests.png",
+        icon: "/icons/interests.png",
         text: "experience",
         context: [
           {
@@ -59,7 +59,7 @@ const menus = [
         ],
       },
       {
-        icon: "/public/icons/education.png",
+        icon: "/icons/education.png",
         text: "education",
         context: [
           {
@@ -90,12 +90,12 @@ const menus = [
         context: [],
       },
       {
-        icon: "/public/icons/phone.png",
+        icon: "/icons/phone.png",
         text: "+254798320724",
         context: [],
       },
       {
-        icon: "/public/icons/whatsapp.png",
+        icon: "/icons/whatsapp.png",
         text: "+254798320724",
         context: [],
       },
