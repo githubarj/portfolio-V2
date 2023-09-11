@@ -14,8 +14,6 @@ function MainOptions(props) {
     }, 300);
   }
 
- 
-
   const context = props.context;
   const contextMenu = context.map((item, index) => {
     return <ContextMenu key={index} {...item} />;
