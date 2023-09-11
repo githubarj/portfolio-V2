@@ -22,11 +22,15 @@
 .footer-links a {
   height: 100%;
   display: flex;
+  opacity: 0.5;
   align-items: center;
   padding: 17.5px 14px;
   border-right: 1px solid var(--secondary-steel-blue);
 }
 
+.footer-links a:hover{
+  opacity: 1 ;
+}
 .footer-github a {
   padding: 14px 16.5px;
   border-left: 1px solid var(--secondary-steel-blue);

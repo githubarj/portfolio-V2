@@ -1,7 +1,12 @@
+import MainSection from "./MainSection"
+import Options from "./Options"
 
 function AboutMe() {
   return (
-    <div>AboutMe</div>
+    <div className="about-container">
+      <Options />
+      <MainSection />
+    </div>
   )
 }
 

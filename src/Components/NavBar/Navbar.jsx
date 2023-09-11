@@ -1,8 +1,10 @@
 import "./navbar.css";
 import { navItems } from "../../Data/links";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <div className="nav-container">
       <div className="nav-main">
@@ -11,20 +13,28 @@ function Navbar() {
           <ul>
             {navItems.links.map((item, index) => {
               return (
-                <li key={index}>
-                  <Link to={item.to} className="body-text">
-                    {item.text}
-                  </Link>
+                <li
+                  key={index}
+                  onClick={() => navigate(item.to)}
+                  className={` 
+                  body-text 
+                  ${location.pathname == item.to ? "active" : ""}
+                  `}
+                >
+                {item.text}
                 </li>
               );
             })}
           </ul>
         </div>
       </div>
-      <div className="nav-contact">
-        <Link to="/contactMe" className="body-text">
-          _contact-me
-        </Link>
+      <div
+        className={` body-text nav-contact ${
+          location.pathname == "/contactMe" ? "active" : ""
+        }`}
+        onClick={() => navigate("contactMe")}
+      >
+        _contact-me
       </div>
     </div>
   );

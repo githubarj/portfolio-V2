@@ -37,6 +37,9 @@ body::-webkit-scrollbar {
   /* Lines */
   --line: #1e2d3d;
 
+  /* Border Line */
+  --border-line: 1px solid var(--secondary-steel-blue);
+
   /* Gradients */
 }
 
@@ -111,3 +114,7 @@ button {
 .container {
   display: flex;
 }
+
+
+
+

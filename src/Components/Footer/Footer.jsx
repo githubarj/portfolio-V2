@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="footer-container">
       <div className="footer-links">
-        <p className="body-text">find me in:</p>
+        <p className="body-text">find me on:</p>
         {footerItems.links.map((item, index) => {
           return (
             <a key={index} href={item.url} rel="noreferrer" target="_blank">

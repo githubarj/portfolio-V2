@@ -28,9 +28,11 @@
 
 
 
-.links ul li:hover {
-  border-bottom: 3px solid var(--accent-orange);
+ .nav-contact:hover, .links ul li:hover {
+  border-bottom: 3px solid var(--accent-peach);
 }
+
+
 
 .links ul li:last-child {
   border-right: 1px solid var(--secondary-steel-blue);
@@ -43,8 +45,12 @@
   right: 0;
   padding: 17.6px 23px;
   border-left: 1px solid var(--secondary-steel-blue);
+  cursor: pointer;
 }
 
-.nav-contact:hover {
+.active
+{
   border-bottom: 3px solid var(--accent-orange);
 }
+
+
