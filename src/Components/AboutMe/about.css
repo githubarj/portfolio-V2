@@ -1,129 +1,107 @@
 .about-container {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
-
-
 
 /* ========================options===================================== */
-.options-container{
-    width: fit-content;
-    border-right: 1px solid var(--secondary-steel-blue);
-    display: flex;
+.options-container {
+  width: fit-content;
+  border-right: 1px solid var(--secondary-steel-blue);
+  display: flex;
 }
-
-
 
 /* Filters */
-.option-filters{
-    display: flex;
-    flex-direction: column;
-    padding: 17.46px;
-    gap:33px;
-    width: fit-content;
-    border-right: var(--border-line);
+.option-filters {
+  display: flex;
+  flex-direction: column;
+  padding: 17.46px;
+  gap: 33px;
+  width: fit-content;
+  border-right: var(--border-line);
 }
 
-.menu-section{
-    display: flex;
-    flex-direction: column;
-
+.menu-section {
+  display: flex;
+  flex-direction: column;
 }
-
-
 
 /* =====================================Menu===================================== */
 
-.menu-container{
-    width: 100%;
+.menu-container {
+  width: 100%;
 }
 
 .section {
-    display: flex;
-    align-items: center;
-    border-bottom: var(--border-line) ;
-    padding: 10px 12px;
-    gap: 8px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border-line);
+  padding: 10px 12px;
+  gap: 8px;
+  cursor: pointer;
 }
-.section-tag{
-    color: var(--secondary-white);
+.section-tag {
+  color: var(--secondary-white);
 }
 
 .menu-items {
-    padding: 18px 50px 27px 12px;
-    border-bottom: var(--border-line);
+  padding: 18px 50px 27px 12px;
+  border-bottom: var(--border-line);
 }
 
 .menu-options {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 
 .one-option {
-    display: flex;
-    align-items: center;
-    gap: 9px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
 
 .arrow-icon {
-    align-self: flex-start;
-    transition: rotate 0.3s ease-in-out;
+  align-self: flex-start;
+  transition: rotate 0.3s ease-in-out;
 }
 
-.option-main, .menu-context {
-    display: flex;
-    align-items: center;
-    gap: 6.5px;
-    cursor: pointer;
+.option-main,
+.menu-context {
+  display: flex;
+  align-items: center;
+  gap: 6.5px;
+  cursor: pointer;
 }
-
-
 
 .menu-icon {
-    width: 10.5px;
-    height: 10.5px;
+  width: 10.5px;
+  height: 10.5px;
 }
 
 .main-and-context {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.context-menu-options{
-    display: none;
-    flex-direction: column;
-    
-    gap: 2px;
-    
-   
+.context-menu-options {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  gap: 2px;
 }
-
 
 /* context menu appearing */
-.arrow-rotate{
-    rotate: 90deg;
+.arrow-rotate {
+  rotate: 90deg;
 }
 
-.show-context{
-    display: flex;
-    opacity: 0;
-     transition: opacity 0.5s ;
-   
-}
-
-.context-appear{
-    opacity: 1;
+.context-appear {
+  opacity: 1;
 }
 
 /* wholemenu apeearing  */
-.arrowhead-rotate{
-    rotate: -90deg;
-}
-
-.show-menu{
-    display: none;
+.arrowhead-rotate {
+  rotate: -90deg;
 }

@@ -11,35 +11,40 @@ function MainOptions(props) {
     setContextState((prev) => !prev);
     setTimeout(() => {
       setAppear((prev) => !prev);
-    }, 300);
+    }, 100);
   }
 
   const context = props.context;
-  const contextMenu = context.map((item, index) => {
-    return <ContextMenu key={index} {...item} />;
-  });
+  const contextMenu = context
+    ? context.map((item, index) => {
+        return <ContextMenu key={index} {...item} />;
+      })
+    : "";
 
   return (
     <div className="one-option" onClick={toggleContext}>
-      <img
-        src="/icons/arrow.png"
-        alt=""
-        style={{ display: `${props.display}` }}
-        className={`icon arrow-icon ${contextState ? "arrow-rotate" : ""} `}
-      />
+      {context && (
+        <img
+          src="/icons/arrow.png"
+          alt=""
+          className={`icon arrow-icon ${contextState && "arrow-rotate"}`}
+        />
+      )}
 
       <div className="main-and-context">
         <div className="option-main">
           <img src={props.icon} alt="" className="menu-icon" />
           <p className="menu-text labels-text"> {props.text} </p>
         </div>
-        <div
-          className={` context-menu-options  ${
-            contextState ? "show-context" : ""
-          } ${appear ? "context-appear" : ""} `}
-        >
-          {contextMenu}
-        </div>
+
+        {contextState && (
+          <div
+            className={` context-menu-options  
+          ${appear && "context-appear"} `}
+          >
+            {contextMenu}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -48,7 +53,6 @@ function MainOptions(props) {
 MainOptions.propTypes = {
   icon: PropTypes.string,
   text: PropTypes.string,
-  display: PropTypes.string,
   context: PropTypes.array,
 };
 

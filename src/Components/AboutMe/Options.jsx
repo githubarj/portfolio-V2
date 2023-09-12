@@ -7,7 +7,7 @@ function Options() {
     return <img key={index} src={item.icon} alt="" className="icon" />;
   });
 
-  const menu = menus.map((item, index) => {
+  const menu = menus.map((item, index) => { 
     return <Menu key={index} {...item} />;
   });
 

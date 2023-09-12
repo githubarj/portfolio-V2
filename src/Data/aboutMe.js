@@ -13,8 +13,6 @@ const filterIcons = [
   },
 ];
 
-
-
 const menus = [
   {
     id: 1,
@@ -84,25 +82,21 @@ const menus = [
   {
     id: 2,
     heading: "contacts",
-
     menuItems: [
       {
         icon: "/icons/mail.png",
         text: "gitihuba9520@gmail.com",
         display: "none",
-        context: [],
       },
       {
         icon: "/icons/phone.png",
         text: "+254798320724",
         display: "none",
-        context: [],
       },
       {
         icon: "/icons/whatsapp.png",
         text: "+254798320724",
         display: "none",
-        context: [],
       },
     ],
   },
