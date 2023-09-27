@@ -89,7 +89,7 @@ button {
   color: var(--primary-black);
   background: var(--accent-orange);
 }
-
+ 
 .default-button {
   color: var(--secondary-white);
   background: var(--primary-button);

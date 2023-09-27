@@ -6,11 +6,11 @@
 /* ========================options===================================== */
 .options-container {
   width: fit-content;
-  border-right: 1px solid var(--secondary-steel-blue);
+  border-right:  var(--border-line);;
   display: flex;
 }
 
-/* Filters */
+/* Filters */ 
 .option-filters {
   display: flex;
   flex-direction: column;
