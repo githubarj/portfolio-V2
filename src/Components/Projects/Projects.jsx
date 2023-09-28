@@ -7,16 +7,11 @@ import { useState } from "react";
 import Filters from "./Filters";
 
 function Projects() {
-  const [selectedFilters, setSelectedFilters] = useState(["all"]);
+    const [selectedFilter, setSelectedFilter] = useState("all");
 
+ 
   const handleFilterChange = (filterName) => {
-    setSelectedFilters((prevSelectedFilters) => {
-      if (prevSelectedFilters.includes(filterName)) {
-        return prevSelectedFilters.filter((filter) => filter !== filterName);
-      } else {
-        return [...prevSelectedFilters, filterName];
-      }
-    });
+    setSelectedFilter(filterName);
   };
 
   const filters = menuItems.map((item, index) => (
@@ -24,18 +19,17 @@ function Projects() {
       key={index}
       {...item}
       index={index}
-      checked={selectedFilters.includes(item.name)}
+      checked={item.name === selectedFilter}
       onChange={() => handleFilterChange(item.name)}
     />
   ));
 
-  const filteredProjects = selectedFilters.includes("all")
-    ? projectsData
-    : projectsData.filter((project) =>
-        project.category.some((category) =>
-          selectedFilters.map((str) => str.toLowerCase()).includes(category)
-        )
-      );
+  const filteredProjects =
+    selectedFilter === "all"
+      ? projectsData
+      : projectsData.filter((project) =>
+          project.category.includes(selectedFilter.toLowerCase())
+        );
 
   const projects = filteredProjects.map((item, index) => (
     <ProjectCard key={index} {...item} number={index} />
