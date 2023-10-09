@@ -1,7 +1,10 @@
 
 function ContactSideBar() {
   return (
-    <div>ContactSideBar</div>
+    <div className="contact-sidebar">
+      <img src="" alt="" />
+
+    </div>
   )
 }
 
