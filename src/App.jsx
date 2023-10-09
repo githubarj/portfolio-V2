@@ -1,26 +1,32 @@
 import "./App.css";
-import { Route, Routes, useLocation } from "react-router-dom";
-import Navbar from "./Components/NavBar/Navbar"
-import Footer from "./Components/Footer/Footer"
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 import Hello from "./Components/Hello/Hello";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import Projects from "./Components/Projects/Projects";
 import ContactMe from "./Components/ContactMe/ContactMe";
+import ScrollToTop from "./Components/Utility/ScrollToTop.jsx";
+import AppLayout from "./Components/Layouts/AppLayout";
 
 function App() {
-  const location = useLocation();
-
+  const routes = createBrowserRouter(
+    createRoutesFromElements(
+      <Route element={<AppLayout />} path="/">
+        <Route index element={<Hello />} />
+        <Route path="aboutMe" element={<AboutMe />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contactMe" element={<ContactMe />} />
+      </Route>
+    )
+  );
   return (
-    <div className="app-container">
-      <Navbar />
-      <Routes key={location.pathname} location={location}>
-        <Route path="/" element={<Hello />} />
-        <Route path="/aboutMe" element={<AboutMe />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contactMe" element={<ContactMe />} />
-      </Routes>
-      <Footer />
-    </div>
+    <RouterProvider router={routes}>
+      <ScrollToTop />
+    </RouterProvider>
   );
 }
 

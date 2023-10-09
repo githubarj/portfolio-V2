@@ -9,7 +9,7 @@ function Main({projects}) {
       <div className="selected-projects body-text">
         <div className="selected-project-category">
           React
-          <img src="/public/icons/close-fill.png" alt="" className="icon" />
+          <img src="/icons/close-fill.png" alt="" className="icon" />
         </div>
       </div>
       <div className="projects-content">

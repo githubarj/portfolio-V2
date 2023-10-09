@@ -8,7 +8,7 @@ const projectsData = [
       "A responsive website built with react for a company based in Kenya",
   },
   {
-    image: "/public/worksImages/portfolio.png",
+    image: "/worksImages/portfolio.png",
     title: "Portfolio V1",
     link: "https://celadon-empanada-0a066e.netlify.app/",
     category: ["react", ],
