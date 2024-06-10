@@ -1,0 +1,27 @@
+//imports
+
+//use
+@use "../sass/mixins" as *;
+
+.app-layout {
+    height: 100vh;
+
+    &__header {
+        @include flex-row-center;
+    }
+    &__body {
+        .body__sider {
+            width: 200;
+            position: fixed;
+            height: 100%;
+        }
+        .body__content {
+            padding: 24;
+            margin: 0;
+            min-height: 280;
+        }
+    }
+    &__footer {
+        @include flex-row-center;
+    }
+}
