@@ -1,8 +1,15 @@
 @use "../../../sass/mixins";
 
+%menu-hover {
+    &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid $accent-orange;
+    }
+}
+
 .header-content {
     &__name {
         @include border-line($right: 1px);
+        float: left;
     }
-
 }
