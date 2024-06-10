@@ -2,12 +2,14 @@
 
 //use
 @use "../sass/mixins" as *;
+@use "../sass/colors";
 
 .app-layout {
     height: 100vh;
 
     &__header {
         @include flex-row-center;
+        @include border-line($bottom: 1px);
     }
     &__body {
         .body__sider {
