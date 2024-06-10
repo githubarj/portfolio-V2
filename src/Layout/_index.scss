@@ -1,14 +1,12 @@
-//imports
-
 //use
-@use "../sass/mixins" as *;
-@use "../sass/colors";
+@use "../sass/mixins";
+//imports
+@import "./Components/sass/headerContent";
 
 .app-layout {
     height: 100vh;
 
     &__header {
-        @include flex-row-center;
         @include border-line($bottom: 1px);
     }
     &__body {

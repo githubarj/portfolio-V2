@@ -1,4 +1,5 @@
 import { ConfigProvider, Layout } from 'antd';
+import HeaderContent from './Components/HeaderContent';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -8,7 +9,7 @@ const AppLayout = () => {
       theme={{
         token: {
           fontFamily: 'Fira Code, monospace',
-          colorTextBase: '#FFFFFF',
+          colorTextBase: '#607B96',
           colorBgBase: '#001626',
         },
         components: {
@@ -20,7 +21,9 @@ const AppLayout = () => {
       }}
     >
       <Layout className='app-layout'>
-        <Header className='app-layout__header'>Header</Header>
+        <Header className='app-layout__header'>
+          <HeaderContent />
+        </Header>
         <Layout hasSider className='app-layout__body'>
           <Sider className='body__sider'>Sider</Sider>
 

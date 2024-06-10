@@ -1,0 +1,8 @@
+@use "../../../sass/mixins";
+
+.header-content {
+    &__name {
+        @include border-line($right: 1px);
+    }
+
+}
