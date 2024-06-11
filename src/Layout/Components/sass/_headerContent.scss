@@ -12,4 +12,26 @@
         @include border-line($right: 1px);
         float: left;
     }
+    &__menus {
+        flex: 1;
+        overflow: hidden;
+        .menu-container {
+            border-bottom: none;
+            li {
+                @include border-line($right: 1px);
+                &::after {
+                    inset-inline: 0 !important;
+                }
+            }
+
+            li:nth-child(4) {
+                align-self: flex-end;
+                @include border-line($right: 0px, $left: 1px);
+            }
+        }
+    }
+}
+
+.ant-menu-item-selected::after {
+    border-bottom-color: $accent-orange !important;
 }

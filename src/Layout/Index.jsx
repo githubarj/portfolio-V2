@@ -17,6 +17,9 @@ const AppLayout = () => {
             bodyBg: '#001626',
             footerBg: '#001626',
           },
+          Menu: {
+            itemBg: '001626',
+          },
         },
       }}
     >
@@ -25,7 +28,7 @@ const AppLayout = () => {
           <HeaderContent />
         </Header>
         <Layout hasSider className='app-layout__body'>
-          <Sider className='body__sider'>Sider</Sider>
+          <Sider className='body__sider'></Sider>
 
           <Content className='body__content'>Content</Content>
         </Layout>
