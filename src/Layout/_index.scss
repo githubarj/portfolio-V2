@@ -1,13 +1,16 @@
-//imports
-
 //use
-@use "../sass/mixins" as *;
+@use "../sass/mixins";
+//imports
+@import "./Components/sass/headerContent";
 
 .app-layout {
     height: 100vh;
 
     &__header {
-        @include flex-row-center;
+        @include border-line($bottom: 1px);
+        padding: 0 0 0 0.8rem;
+        height: 50px;
+        line-height: 50px;
     }
     &__body {
         .body__sider {
