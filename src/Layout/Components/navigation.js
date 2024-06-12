@@ -4,6 +4,8 @@ import {
   FaGraduationCap,
   FaRegAddressCard,
   FaMarkdown,
+  FaPhone,
+  FaEnvelope,
 } from 'react-icons/fa';
 
 const optionsLabel = (title) => {
@@ -76,6 +78,22 @@ export const items = [
             label: optionsLabel('university'),
           },
         ],
+      },
+    ],
+  },
+  {
+    key: '255',
+    label: 'Contacts',
+    children: [
+      {
+        key: 'email',
+        icon: React.createElement(FaEnvelope),
+        label: 'githuba9520@gmail.com',
+      },
+      {
+        key: 'phone',
+        icon: React.createElement(FaPhone),
+        label: '+254 798320724',
       },
     ],
   },
