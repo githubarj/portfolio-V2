@@ -1,5 +1,6 @@
 import { ConfigProvider, Layout } from 'antd';
 import HeaderContent from './Components/HeaderContent';
+import FooterContent from './Components/FooterContent';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -14,6 +15,8 @@ const AppLayout = () => {
         },
         components: {
           Layout: {
+            headerBg: '#001626',
+            siderBg: '#001626',
             bodyBg: '#001626',
             footerBg: '#001626',
           },
@@ -33,7 +36,9 @@ const AppLayout = () => {
           <Content className='body__content'>Content</Content>
         </Layout>
 
-        <Footer className='app-layout__footer'>Footer</Footer>
+        <Footer className='app-layout__footer'>
+          <FooterContent />
+        </Footer>
       </Layout>
     </ConfigProvider>
   );
