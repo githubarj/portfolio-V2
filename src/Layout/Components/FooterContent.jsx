@@ -10,17 +10,17 @@ const FooterContent = () => {
     {
       title: 'linked in',
       icon: GrLinkedinOption,
-      link: 'www.linkedin.com/in/richard-jeremy-githuba-80548922a',
+      link: 'https://www.linkedin.com/in/richard-jeremy-githuba-80548922a/',
     },
     {
       title: 'Twitter',
       icon: FaTwitter,
-      link: '',
+      link: 'https://twitter.com/githubarj',
     },
     {
       title: 'GitHub',
       icon: PiGithubLogoFill,
-      link: 'https://www.linkedin.com/in/richard-jeremy-githuba-80548922a/',
+      link: 'https://github.com/githubarj',
       username: '@githubarj',
     },
   ];
