@@ -21,7 +21,10 @@ const getLevelKeys = (items1) => {
 const levelKeys = getLevelKeys(items);
 
 const NavigationMenu = () => {
-  const [stateOpenKeys, setStateOpenKeys] = useState(['1', '']);
+  const [stateOpenKeys, setStateOpenKeys] = useState([
+    'personal-info',
+    'bio',
+  ]);
 
   const onOpenChange = (openKeys) => {
     const currentOpenKey = openKeys.find(
@@ -59,7 +62,7 @@ const NavigationMenu = () => {
       <Menu
         className='navigation-menu'
         mode='inline'
-        defaultSelectedKeys={['231']}
+        defaultSelectedKeys={['personal-info', 'bio', 'overview']}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
         items={items}

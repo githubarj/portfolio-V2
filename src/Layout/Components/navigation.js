@@ -19,47 +19,47 @@ const optionsLabel = (title) => {
 
 export const items = [
   {
-    key: '57',
+    key: 'personal-info',
     label: 'Personal Info',
     children: [
       {
-        key: '1',
+        key: 'bio',
         icon: React.createElement(FaRegAddressCard),
         label: 'Bio',
         children: [
           {
-            key: '11',
+            key: 'overview',
             label: optionsLabel('Overview'),
           },
           {
-            key: '12',
-            label: optionsLabel('Personal Info'),
+            key: 'interests',
+            label: optionsLabel('Interests'),
           },
         ],
       },
       {
-        key: '2',
+        key: 'experience',
         icon: React.createElement(FaFolderOpen),
         label: 'Experience',
         children: [
           {
-            key: '21',
+            key: 'software-developer',
             label: optionsLabel('software-developer'),
           },
           {
-            key: '22',
+            key: 'it-officer',
             label: optionsLabel('it-officer'),
           },
           {
-            key: '23',
+            key: 'volunteer-librarian',
             label: optionsLabel('volunteer-librarian'),
           },
           {
-            key: '45',
+            key: 'attachee',
             label: optionsLabel('attachee'),
           },
           {
-            key: '24',
+            key: 'stem-teacher',
             label: optionsLabel('stem-teacher'),
           },
         ],
@@ -82,7 +82,7 @@ export const items = [
     ],
   },
   {
-    key: '255',
+    key: 'contacts',
     label: 'Contacts',
     children: [
       {
