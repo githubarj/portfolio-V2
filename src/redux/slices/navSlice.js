@@ -15,7 +15,7 @@ const navSlice = createSlice({
 const mobileSlice = createSlice({
   name: 'isMobile',
   initialState: {
-    value: typeof window !== 'undefined' ? window.innerWidth <= 581 : false,
+    value: typeof window !== 'undefined' ? window.innerWidth <= 576 : false,
   },
   reducers: {
     resize: (state, action) => {

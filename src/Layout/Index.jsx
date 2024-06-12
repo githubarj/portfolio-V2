@@ -15,7 +15,7 @@ const AppLayout = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      dispatch(resize(window.innerWidth <= 581));
+      dispatch(resize(window.innerWidth <= 576));
     };
 
     window.addEventListener('resize', handleResize);
@@ -50,12 +50,14 @@ const AppLayout = () => {
         <Header className='app-layout__header'>
           <HeaderContent isMobile={isMobile} />
         </Header>
-        <Layout hasSider={isMobile} className='app-layout__body'>
+        <Layout hasSider={!isMobile} className='app-layout__body'>
           {!isMobile ? (
             <Sider className='body__sider'>
               <NavigationMenu />
             </Sider>
-          ) : null}
+          ) : (
+            <NavigationMenu />
+          )}
 
           <Content className='body__content'>Content</Content>
         </Layout>
