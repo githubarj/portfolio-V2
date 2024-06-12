@@ -50,12 +50,14 @@ const AppLayout = () => {
         <Header className='app-layout__header'>
           <HeaderContent isMobile={isMobile} />
         </Header>
-        <Layout hasSider={isMobile} className='app-layout__body'>
+        <Layout hasSider={!isMobile} className='app-layout__body'>
           {!isMobile ? (
             <Sider className='body__sider'>
               <NavigationMenu />
             </Sider>
-          ) : null}
+          ) : (
+            <NavigationMenu />
+          )}
 
           <Content className='body__content'>Content</Content>
         </Layout>
