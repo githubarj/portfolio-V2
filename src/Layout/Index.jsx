@@ -4,6 +4,7 @@ import FooterContent from './Components/FooterContent';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { resize } from '../redux/slices/navSlice';
+import NavigationMenu from './Components/navigationMenu';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -50,7 +51,11 @@ const AppLayout = () => {
           <HeaderContent isMobile={isMobile} />
         </Header>
         <Layout hasSider={isMobile} className='app-layout__body'>
-          {!isMobile ? <Sider className='body__sider'></Sider> : <></>}
+          {!isMobile ? (
+            <Sider className='body__sider'>
+              <NavigationMenu />
+            </Sider>
+          ) : null}
 
           <Content className='body__content'>Content</Content>
         </Layout>
