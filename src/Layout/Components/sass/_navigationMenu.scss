@@ -27,4 +27,10 @@
         @include flex-row-center;
         gap: 5px;
     }
+
+    .filter-options {
+        @include flex-row-center;
+        gap: 15px;
+      
+    }
 }

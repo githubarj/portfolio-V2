@@ -1,6 +1,6 @@
 import { ConfigProvider, Menu } from 'antd';
 import { useState } from 'react';
-import { items } from './navigation';
+import { aboutItems } from './navigation';
 
 const getLevelKeys = (items1) => {
   const key = {};
@@ -18,7 +18,7 @@ const getLevelKeys = (items1) => {
   return key;
 };
 
-const levelKeys = getLevelKeys(items);
+const levelKeys = getLevelKeys(aboutItems);
 
 const NavigationMenu = () => {
   const [stateOpenKeys, setStateOpenKeys] = useState(['personal-info', 'bio']);
@@ -63,7 +63,7 @@ const NavigationMenu = () => {
         defaultSelectedKeys={['personal-info', 'bio', 'overview']}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
-        items={items}
+        items={aboutItems}
       />
     </ConfigProvider>
   );
