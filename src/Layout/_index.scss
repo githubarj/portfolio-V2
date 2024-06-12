@@ -2,6 +2,7 @@
 @use "../sass/mixins";
 //imports
 @import "./Components/sass/headerContent";
+@import "./Components/sass/footer";
 
 .app-layout {
     height: 100vh;
@@ -26,5 +27,9 @@
     }
     &__footer {
         @include flex-row-center;
+        @include border-line($top: 1px);
+        padding: 0 0.8rem;
+        height: 50px;
+        z-index: 999;
     }
 }

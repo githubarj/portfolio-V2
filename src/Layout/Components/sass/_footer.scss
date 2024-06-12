@@ -1,0 +1,27 @@
+@use "../../../sass//mixins";
+
+.footer {
+    width: 100%;
+    height: 100%;
+    &__items {
+        height: 100%;
+        @include border-line($right: 1px);
+        padding: 0 8px;
+        @include flex-row-center;
+    }
+    &__links {
+        a {
+            @include flex-row-center;
+
+            svg {
+                width: 30px;
+            }
+        }
+    }
+    div:nth-child(4) {
+        margin-left: auto;
+        @include border-line($right: 0px, $left: 1px);
+        
+    }
+
+}
