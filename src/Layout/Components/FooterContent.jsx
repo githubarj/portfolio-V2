@@ -20,10 +20,10 @@ const FooterContent = () => {
     {
       title: 'GitHub',
       icon: PiGithubLogoFill,
-      link: 'https://github.com/githubarj',
+      link: 'https://www.linkedin.com/in/richard-jeremy-githuba-80548922a/',
       username: '@githubarj',
     },
-  ]; 
+  ];
 
   return (
     <Flex align='center' className='footer'>

@@ -6,6 +6,7 @@
 
 .app-layout {
     height: 100vh;
+    max-height: 100vh;
 
     &__header {
         @include border-line($bottom: 1px);
