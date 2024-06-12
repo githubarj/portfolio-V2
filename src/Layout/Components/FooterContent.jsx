@@ -23,7 +23,7 @@ const FooterContent = () => {
       link: 'https://github.com/githubarj',
       username: '@githubarj',
     },
-  ];
+  ]; 
 
   return (
     <Flex align='center' className='footer'>
