@@ -8,20 +8,34 @@
         @include border-line($right: 1px);
         padding: 0 8px;
         @include flex-row-center;
-    }
-    &__links {
-        a {
-            @include flex-row-center;
-
-            svg {
-                width: 30px;
-            }
+        color: $primary-button;
+        &:hover {
+            color: $accent-peach !important ;
         }
     }
-    div:nth-child(4) {
+    &__links {
+        @include flex-row-center;
+        svg {
+            width: 30px;
+            color: inherit;
+        }
+    }
+    a:nth-child(4) {
         margin-left: auto;
+        padding-left: 15px;
+        padding-right: 0;
+
         @include border-line($right: 0px, $left: 1px);
-        
+
+        @media (max-width: 576px) {
+            margin-left: 0;
+            @include border-line($left: 0px);
+        }
     }
 
+    div:nth-child(1) {
+        @media (max-width: 576px) {
+            flex: 1;
+        }
+    }
 }

@@ -3,7 +3,6 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import { FaTwitter } from 'react-icons/fa';
 import { PiGithubLogoFill } from 'react-icons/pi';
 import React from 'react';
-import { ImEyeMinus } from 'react-icons/im';
 const { Text } = Typography;
 
 const FooterContent = () => {
@@ -32,13 +31,18 @@ const FooterContent = () => {
         <Text>Find me on: </Text>
       </Col>
       {socials.map((item, index) => (
-        <Col className='footer__items footer__links' key={index}>
-          <Tooltip title={item.title}>
-            <a href={item.link} target='blank'>
+        <a
+          href={item.link}
+          target='blank'
+          key={index}
+          className='footer__items footer__links'
+        >
+          <Col>
+            <Tooltip title={item.title}>
               <Text>{item.username}</Text> {React.createElement(item.icon)}
-            </a>
-          </Tooltip>
-        </Col>
+            </Tooltip>
+          </Col>
+        </a>
       ))}
     </Flex>
   );
