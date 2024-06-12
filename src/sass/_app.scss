@@ -11,30 +11,3 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-:root {
-  /* primary colors */
-  --primary-black: #01080e;
-  --primary-blue: #011627;
-  --primary-dark-blue: #011221;
-  --primary-button: #1c2b3a;
-
-  /* Secondary colors */
-  --secondary-steel-blue: #607b96;
-  --secondary-teal: #3c9d93;
-  --secondary-blue: #4d5bce;
-  --secondary-white: #ffffff;
-
-  /* Accent colors */
-  --accent-orange: #fea55f;
-  --accent-teal: #43d9ad;
-  --accent-peach: #e99287;
-  --accent-purple: #c98bdf;
-
-  /* Lines */
-  --line: #1e2d3d;
-
-  /* Border Line */
-  --border-line: 1px solid var(--secondary-steel-blue);
-
-  /* Gradients */
-}
