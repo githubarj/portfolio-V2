@@ -31,12 +31,6 @@
     .filter-options {
         @include flex-row-center;
         gap: 15px;
-        width: 100%;
-        height: 100%;
-
-        > span:nth-child(2) {
-            gap: 8px;
-            @include flex-row-center;
-        }
+      
     }
 }
