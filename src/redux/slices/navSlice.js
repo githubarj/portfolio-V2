@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { combineReducers, createSlice } from '@reduxjs/toolkit';
 
 const navSlice = createSlice({
   name: 'currentPage',
@@ -12,6 +12,24 @@ const navSlice = createSlice({
   },
 });
 
-export const { navTo } = navSlice.actions;
+const mobileSlice = createSlice({
+  name: 'isMobile',
+  initialState: {
+    value: typeof window !== 'undefined' ? window.innerWidth <= 581 : false,
+  },
+  reducers: {
+    resize: (state, action) => {
+      state.value = action.payload;
+    },
+  },
+});
 
-export default navSlice.reducer;
+export const { navTo } = navSlice.actions;
+export const { resize } = mobileSlice.actions;
+
+const layoutReducer = combineReducers({
+  currentPage: navSlice.reducer,
+  isMobile: mobileSlice.reducer,
+});
+
+export default layoutReducer;
