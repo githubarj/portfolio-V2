@@ -15,7 +15,7 @@ const AppLayout = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      dispatch(resize(window.innerWidth <= 581));
+      dispatch(resize(window.innerWidth <= 576));
     };
 
     window.addEventListener('resize', handleResize);
