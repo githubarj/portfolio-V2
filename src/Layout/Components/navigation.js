@@ -1,3 +1,4 @@
+import { Checkbox } from 'antd';
 import React from 'react';
 import {
   FaFolderOpen,
@@ -6,7 +7,15 @@ import {
   FaMarkdown,
   FaPhone,
   FaEnvelope,
+  FaExternalLinkAlt,
+  FaReact,
+  FaHtml5,
+  FaCss3,
+  FaRust,
 } from 'react-icons/fa';
+import { SiGnubash } from 'react-icons/si';
+import { IoLogoJavascript } from 'react-icons/io5';
+import { SiSolidity } from 'react-icons/si';
 
 const optionsLabel = (title) => {
   return React.createElement(
@@ -17,7 +26,16 @@ const optionsLabel = (title) => {
   );
 };
 
-export const items = [
+const filterLabel = (title, icon) => {
+  return React.createElement(
+    'div',
+    { className: 'filter-options' },
+    React.createElement(icon),
+    title
+  );
+};
+
+export const aboutItems = [
   {
     key: 'personal-info',
     label: 'Personal Info',
@@ -71,11 +89,11 @@ export const items = [
         children: [
           {
             key: '31',
-            label: optionsLabel('high-school'),
+            label: optionsLabel('alliance-hs'),
           },
           {
             key: '32',
-            label: optionsLabel('university'),
+            label: optionsLabel('strathmore-uni'),
           },
         ],
       },
@@ -94,6 +112,61 @@ export const items = [
         key: 'phone',
         icon: React.createElement(FaPhone),
         label: '+254 798320724',
+      },
+    ],
+  },
+];
+
+export const projectsItems = [
+  {
+    key: 'projects',
+    label: 'Projects',
+    children: [
+      { key: 'JavaScript', label: filterLabel('JavaScript', IoLogoJavascript) },
+      { key: 'Rust', label: filterLabel('Rust', FaRust) },
+      { key: 'HTML', label: filterLabel('HTML', FaHtml5) },
+      { key: 'CSS', label: filterLabel('CSS', FaCss3) },
+      { key: 'Solidity', label: filterLabel('Solidity', SiSolidity) },
+      { key: 'Bash', label: filterLabel('Bash', SiGnubash) },
+    ],
+  },
+];
+
+export const contactItems = [
+  {
+    key: 'contacts',
+    label: 'Contacts',
+    children: [
+      {
+        key: 'email',
+        icon: React.createElement(FaEnvelope),
+        label: 'githuba9520@gmail.com',
+      },
+      {
+        key: 'phone',
+        icon: React.createElement(FaPhone),
+        label: '+254 798320724',
+      },
+    ],
+  },
+  {
+    key: 'find-me-also-on',
+    label: 'find-me-aslo-on',
+    children: [
+      {
+        key: 'github',
+        icon: React.createElement(FaExternalLinkAlt),
+        label: 'github account',
+      },
+      {
+        key: 'wakatime',
+        icon: React.createElement(FaExternalLinkAlt),
+        label: 'wakatime profile',
+      },
+      {
+        key: 'codewars',
+        icon: React.createElement(FaExternalLinkAlt),
+        label: 'codewars profile',
       },
     ],
   },
