@@ -51,8 +51,8 @@ export const items = [
             label: optionsLabel('it-officer'),
           },
           {
-            key: 'volunteer-librarian',
-            label: optionsLabel('volunteer-librarian'),
+            key: 'voluntee-librarian',
+            label: optionsLabel('voluntee-librarian'),
           },
           {
             key: 'attachee',
