@@ -1,5 +1,6 @@
 import { combineReducers, createSlice } from '@reduxjs/toolkit';
 
+
 const navSlice = createSlice({
   name: 'currentPage',
   initialState: {
@@ -23,6 +24,8 @@ const mobileSlice = createSlice({
     },
   },
 });
+
+
 
 export const { navTo } = navSlice.actions;
 export const { resize } = mobileSlice.actions;

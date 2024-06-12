@@ -1,6 +1,7 @@
 import { ConfigProvider, Menu } from 'antd';
 import { useState } from 'react';
-import { aboutItems } from './navigation';
+import { aboutItems, projectsItems, contactItems } from './navigation';
+import { useLocation } from 'react-router-dom';
 
 const getLevelKeys = (items1) => {
   const key = {};
@@ -22,6 +23,17 @@ const levelKeys = getLevelKeys(aboutItems);
 
 const NavigationMenu = () => {
   const [stateOpenKeys, setStateOpenKeys] = useState(['personal-info', 'bio']);
+  const location = useLocation();
+
+  const path = location.pathname.slice(1);
+  const items =
+    path === 'projects'
+      ? projectsItems
+      : path === 'contact-me'
+      ? contactItems
+      : path === 'about'
+      ? aboutItems
+      : null;
 
   const onOpenChange = (openKeys) => {
     const currentOpenKey = openKeys.find(
@@ -63,7 +75,7 @@ const NavigationMenu = () => {
         defaultSelectedKeys={['personal-info', 'bio', 'overview']}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
-        items={aboutItems}
+        items={items}
       />
     </ConfigProvider>
   );
