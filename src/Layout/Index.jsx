@@ -5,15 +5,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { resize } from '../redux/slices/navSlice';
 import NavigationMenu from './Components/navigationMenu';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, } from 'react-router-dom';
+import useRouting from '../hooks/useRouting';
+import CustomBreadCrumb from './Components/CustomBreadCrumb';
 
 const { Header, Footer, Sider, Content } = Layout;
 
 const AppLayout = () => {
   const isMobile = useSelector((state) => state.layout.isMobile.value);
-  const location = useLocation();
 
-  const path = location.pathname.slice(1);
+  const { pathArray } = useRouting();
+
+  const path = pathArray[0] || '';
 
   const dispatch = useDispatch();
 
@@ -68,6 +71,7 @@ const AppLayout = () => {
             ))}
 
           <Content className='body__content'>
+            <CustomBreadCrumb isMobile={isMobile} pathArray={pathArray} />
             <Outlet />
           </Content>
         </Layout>

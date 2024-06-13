@@ -13,6 +13,8 @@ const navSlice = createSlice({
   },
 });
 
+
+
 const mobileSlice = createSlice({
   name: 'isMobile',
   initialState: {
@@ -24,6 +26,9 @@ const mobileSlice = createSlice({
     },
   },
 });
+
+
+
 
 
 

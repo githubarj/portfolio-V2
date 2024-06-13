@@ -1,0 +1,10 @@
+@use "../../../sass/mixins";
+
+.bread-crumb {
+    padding: 7px 15px;
+    // @include border-line($bottom: 1px);
+}
+.menu-options {
+    @include flex-row-center;
+    gap: 5px;
+}

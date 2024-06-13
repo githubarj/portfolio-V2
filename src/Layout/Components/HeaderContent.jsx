@@ -1,23 +1,24 @@
 import { Col, ConfigProvider, Dropdown, Menu, Row, Typography } from 'antd';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useRouting from '../../hooks/useRouting';
 
 const { Text } = Typography;
 
-function HeaderContent({ isMobile }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const path = location.pathname.slice(1);
+const items = [
+  { label: '_hello', key: 'hello' },
+  { label: '_about-me', key: 'about' },
+  { label: '_projects', key: 'projects' },
+  { label: '_contact-me', key: 'contact-me' },
+];
 
-  const items = [
-    { label: '_hello', key: 'hello' },
-    { label: '_about-me', key: 'about' },
-    { label: '_projects', key: 'projects' },
-    { label: '_contact-me', key: 'contact-me' },
-  ];
+function HeaderContent({ isMobile }) {
+  const { navigateTo, pathArray } = useRouting();
+
+  const path = pathArray[0] || '';
 
   const handleClick = (e) => {
-    navigate(e.key);
+    navigateTo(e.key);
   };
 
   return (
@@ -52,7 +53,7 @@ function HeaderContent({ isMobile }) {
                 items,
                 selectable: true,
                 defaultSelectedKeys: ['hello'],
-                onClick:  handleClick ,
+                onClick: handleClick,
               }}
               placement='bottomRight'
               arrow={{ pointAtCenter: true }}

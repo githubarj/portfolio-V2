@@ -1,7 +1,9 @@
 import { ConfigProvider, Menu } from 'antd';
 import { useState } from 'react';
 import { aboutItems, projectsItems, contactItems } from './navigation';
-import { useLocation } from 'react-router-dom';
+import useRouting from '../../hooks/useRouting';
+
+// TODO : Fix the menus on this page - route switching and persistence in openKeys across routes, move state management to redux
 
 const getLevelKeys = (items1) => {
   const key = {};
@@ -27,9 +29,10 @@ const NavigationMenu = () => {
     'contacts',
     'find-me-also-on',
   ]);
-  const location = useLocation();
 
-  const path = location.pathname.slice(1);
+  const { pathArray } = useRouting();
+
+  const path = pathArray[0] || '';
   const items =
     path === 'projects'
       ? projectsItems
@@ -79,7 +82,13 @@ const NavigationMenu = () => {
         multiple={path === 'projects'}
         className='navigation-menu'
         mode='inline'
-        defaultSelectedKeys={['personal-info', 'bio', 'overview', 'React', 'Solidity']}
+        defaultSelectedKeys={[
+          'personal-info',
+          'bio',
+          'overview',
+          'React',
+          'Solidity',
+        ]}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
         items={items}
