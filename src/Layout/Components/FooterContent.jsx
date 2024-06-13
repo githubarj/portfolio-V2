@@ -1,12 +1,17 @@
 import { Col, Flex, Tooltip, Typography } from 'antd';
 import { GrLinkedinOption } from 'react-icons/gr';
-import { FaTwitter } from 'react-icons/fa';
+import { FaTwitter, FaGithub } from 'react-icons/fa';
 import { PiGithubLogoFill } from 'react-icons/pi';
 import React from 'react';
 const { Text } = Typography;
 
 const FooterContent = () => {
   const socials = [
+    {
+      title: 'GitHub',
+      icon: FaGithub,
+      link: 'https://github.com/githubarj',
+    },
     {
       title: 'linked in',
       icon: GrLinkedinOption,
