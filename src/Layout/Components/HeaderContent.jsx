@@ -39,7 +39,7 @@ function HeaderContent({ isMobile }) {
           xs={20}
           className={`header-content__name ${isMobile && 'no-border'}`}
         >
-          <Text>githuba-jeremy</Text>
+          <Text>githuba-jeremy </Text>
         </Col>
         <Col
           sm={19}
