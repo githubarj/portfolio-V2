@@ -4,7 +4,7 @@
 @import "./Components/sass/headerContent";
 @import "./Components/sass/footerContent";
 @import "./Components/sass/navigationMenu";
-@import "./Components/sass/bodyContent";
+@import "./Components/sass/breadCrumb";
 
 .app-layout {
     height: 100vh;
@@ -32,7 +32,7 @@
         }
         .body__content {
             flex: 1;
-            padding: 0 15px;
+           
         }
     }
     &__footer {

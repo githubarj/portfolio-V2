@@ -20,7 +20,7 @@ import { SiSolidity } from 'react-icons/si';
 const optionsLabel = (title) => {
   return React.createElement(
     'div',
-    { className: 'menu-options' },
+    { className: 'menu-options ' },
     React.createElement(FaMarkdown),
     title
   );
@@ -83,16 +83,16 @@ export const aboutItems = [
         ],
       },
       {
-        key: '3',
+        key: 'education',
         icon: React.createElement(FaGraduationCap),
         label: 'Education',
         children: [
           {
-            key: '31',
+            key: 'alliance-hs',
             label: optionsLabel('alliance-hs'),
           },
           {
-            key: '32',
+            key: 'strathmore-uni',
             label: optionsLabel('strathmore-uni'),
           },
         ],
