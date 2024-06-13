@@ -47,7 +47,7 @@ const CustomBreadCrumb = ({ pathArray, isMobile }) => {
   return (
     <Breadcrumb
       className='bread-crumb'
-      separator=' '
+      separator='>'
       itemRender={itemRender}
       items={items}
     />
