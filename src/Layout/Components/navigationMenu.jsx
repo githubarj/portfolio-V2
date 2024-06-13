@@ -1,6 +1,7 @@
 import { ConfigProvider, Menu } from 'antd';
 import { useState } from 'react';
-import { aboutItems } from './navigation';
+import { aboutItems, projectsItems, contactItems } from './navigation';
+import { useLocation } from 'react-router-dom';
 
 const getLevelKeys = (items1) => {
   const key = {};
@@ -18,10 +19,27 @@ const getLevelKeys = (items1) => {
   return key;
 };
 
-const levelKeys = getLevelKeys(aboutItems);
-
 const NavigationMenu = () => {
-  const [stateOpenKeys, setStateOpenKeys] = useState(['personal-info', 'bio']);
+  const [stateOpenKeys, setStateOpenKeys] = useState([
+    'personal-info',
+    'bio',
+    'projects',
+    'contacts',
+    'find-me-also-on',
+  ]);
+  const location = useLocation();
+
+  const path = location.pathname.slice(1);
+  const items =
+    path === 'projects'
+      ? projectsItems
+      : path === 'contact-me'
+      ? contactItems
+      : path === 'about'
+      ? aboutItems
+      : null;
+
+  const levelKeys = getLevelKeys(items);
 
   const onOpenChange = (openKeys) => {
     const currentOpenKey = openKeys.find(
@@ -58,12 +76,13 @@ const NavigationMenu = () => {
       }}
     >
       <Menu
+        multiple={path === 'projects'}
         className='navigation-menu'
         mode='inline'
-        defaultSelectedKeys={['personal-info', 'bio', 'overview']}
+        defaultSelectedKeys={['personal-info', 'bio', 'overview', 'React', 'Solidity']}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
-        items={aboutItems}
+        items={items}
       />
     </ConfigProvider>
   );

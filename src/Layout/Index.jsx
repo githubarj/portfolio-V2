@@ -5,11 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { resize } from '../redux/slices/navSlice';
 import NavigationMenu from './Components/navigationMenu';
+import { Outlet, useLocation } from 'react-router-dom';
 
 const { Header, Footer, Sider, Content } = Layout;
 
 const AppLayout = () => {
   const isMobile = useSelector((state) => state.layout.isMobile.value);
+  const location = useLocation();
+
+  const path = location.pathname.slice(1);
 
   const dispatch = useDispatch();
 
@@ -50,16 +54,22 @@ const AppLayout = () => {
         <Header className='app-layout__header'>
           <HeaderContent isMobile={isMobile} />
         </Header>
-        <Layout hasSider={!isMobile} className='app-layout__body'>
-          {!isMobile ? (
-            <Sider className='body__sider'>
+        <Layout
+          hasSider={!isMobile && path !== 'hello'}
+          className='app-layout__body'
+        >
+          {path !== 'hello' &&
+            (!isMobile ? (
+              <Sider className='body__sider'>
+                <NavigationMenu />
+              </Sider>
+            ) : (
               <NavigationMenu />
-            </Sider>
-          ) : (
-            <NavigationMenu />
-          )}
+            ))}
 
-          <Content className='body__content'>Content</Content>
+          <Content className='body__content'>
+            <Outlet />
+          </Content>
         </Layout>
 
         <Footer className='app-layout__footer'>

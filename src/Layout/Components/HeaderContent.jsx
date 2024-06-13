@@ -1,23 +1,23 @@
 import { Col, ConfigProvider, Dropdown, Menu, Row, Typography } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { navTo } from '../../redux/slices/navSlice';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const { Text } = Typography;
 
 function HeaderContent({ isMobile }) {
-  const current = useSelector((state) => state.layout.currentPage.value);
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const path = location.pathname.slice(1);
 
   const items = [
     { label: '_hello', key: 'hello' },
     { label: '_about-me', key: 'about' },
     { label: '_projects', key: 'projects' },
-    { label: '_contact-me', key: 'contact' },
+    { label: '_contact-me', key: 'contact-me' },
   ];
 
   const handleClick = (e) => {
-    dispatch(navTo(e.key));
+    navigate(e.key);
   };
 
   return (
@@ -58,7 +58,7 @@ function HeaderContent({ isMobile }) {
             <Menu
               className='menu-container'
               onClick={handleClick}
-              selectedKeys={[current]}
+              selectedKeys={[path]}
               mode='horizontal'
               items={items}
             />

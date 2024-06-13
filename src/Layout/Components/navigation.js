@@ -122,6 +122,7 @@ export const projectsItems = [
     key: 'projects',
     label: 'Projects',
     children: [
+      { key: 'React', label: filterLabel('React', FaReact) },
       { key: 'JavaScript', label: filterLabel('JavaScript', IoLogoJavascript) },
       { key: 'Rust', label: filterLabel('Rust', FaRust) },
       { key: 'HTML', label: filterLabel('HTML', FaHtml5) },
