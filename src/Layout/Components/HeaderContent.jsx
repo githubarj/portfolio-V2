@@ -48,7 +48,12 @@ function HeaderContent({ isMobile }) {
           {isMobile ? (
             <Dropdown
               trigger={['click']}
-              menu={{ items, selectable: true, defaultSelectedKeys: ['hello'] }}
+              menu={{
+                items,
+                selectable: true,
+                defaultSelectedKeys: ['hello'],
+                onClick:  handleClick ,
+              }}
               placement='bottomRight'
               arrow={{ pointAtCenter: true }}
             >
