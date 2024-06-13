@@ -4,6 +4,7 @@
 @import "./Components/sass/headerContent";
 @import "./Components/sass/footerContent";
 @import "./Components/sass/navigationMenu";
+@import "./Components/sass/bodyContent";
 
 .app-layout {
     height: 100vh;
@@ -14,6 +15,8 @@
         padding: 0 0 0 0.8rem;
         height: 50px;
         line-height: 50px;
+        position: "sticky";
+        top: 0;
     }
     &__body {
         .body__sider {
@@ -22,13 +25,14 @@
             max-width: 21.6% !important;
             width: 21.833333333333336% !important;
             min-width: 265px !important;
-            position: fixed;
+            position: sticky;
+            top: 50px;
             height: 100%;
+            left: 0;
         }
         .body__content {
-            padding: 24;
-            margin: 0;
-            min-height: 280;
+            flex: 1;
+            padding: 0 15px;
         }
     }
     &__footer {
@@ -37,5 +41,8 @@
         padding: 0 0.8rem;
         height: 50px;
         z-index: 999;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
     }
 }
