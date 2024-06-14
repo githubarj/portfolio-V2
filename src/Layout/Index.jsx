@@ -39,6 +39,7 @@ const AppLayout = () => {
           fontFamily: 'Fira Code, monospace',
           colorTextBase: '#607B96',
           colorBgBase: '#001626',
+          
         },
         components: {
           Layout: {

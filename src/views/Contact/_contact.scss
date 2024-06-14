@@ -2,12 +2,11 @@
 
 .contact-container {
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
+    width: 100% !important;
     &__form-col {
-        @include flex-column-center;
         width: 80%;
-        @include border-line($right: 1px);
+        form {
+        }
     }
     &__code {
     
