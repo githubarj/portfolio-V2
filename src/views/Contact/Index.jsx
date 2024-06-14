@@ -1,7 +1,6 @@
 import { Button, Col, ConfigProvider, Form, Input, Row } from 'antd';
 import FormDisplay from './Components/FormDisplay';
 import { useSelector } from 'react-redux';
-import { ThemeProvider } from '@emotion/react';
 
 const { TextArea } = Input;
 
@@ -17,15 +16,23 @@ const Contact = () => {
   return (
     <ConfigProvider
       theme={{
-        token: { screenXLMin: 1025, screenLGMax: 1024 },
+        token: {
+          screenXLMin: 1025,
+          screenLGMax: 1024,
+          colorError: '#c4756a',
+          colorErrorBgHover: '#011221',
+        },
         components: {
           Button: {
             contentFontSizeLG: '12',
-            defaultBg: '#1C2B3A',
             defaultColor: 'ffffff',
             primaryShadow: '0',
             colorPrimary: '#1C2B3A',
             colorPrimaryHover: '#334854',
+          },
+          Input: {
+            activeBg: '#011221',
+            colorErrorBg: '#051B2B',
           },
         },
       }}
@@ -39,6 +46,7 @@ const Contact = () => {
           sm={24}
         >
           <Form
+            scrollToFirstError
             size='large'
             form={form}
             variant='filled'
@@ -46,14 +54,46 @@ const Contact = () => {
             layout='vertical'
             autoComplete='off'
           >
-            <Form.Item name='name' label='_name :'>
-              <Input />
+            <Form.Item
+              name='name'
+              label='_name :'
+              requiredMark='hidden'
+              rules={[
+                {
+                  required: true,
+                  message: '_name should have a value!',
+                },
+              ]}
+            >
+              <Input allowClear />
             </Form.Item>
-            <Form.Item name='email' label='_email :'>
-              <Input />
+            <Form.Item
+              name='email'
+              label='_email :'
+              rules={[
+                {
+                  required: true,
+                  // message: '_email should have a value!',
+                },
+                {
+                  type: 'email',
+                  message: 'enter a valid email',
+                },
+              ]}
+            >
+              <Input allowClear />
             </Form.Item>
-            <Form.Item name='message' label='_message :'>
-              <TextArea rows={4} />
+            <Form.Item
+              name='message'
+              label='_message :'
+              rules={[
+                {
+                  required: true,
+                  message: '_message should have a value!',
+                },
+              ]}
+            >
+              <TextArea allowClear rows={4} />
             </Form.Item>
             <Form.Item>
               <Button type='primary' htmlType='submit'>
