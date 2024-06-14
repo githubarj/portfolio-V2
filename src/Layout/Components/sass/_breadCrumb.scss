@@ -3,6 +3,10 @@
 .bread-crumb {
     padding: 7px 15px;
     // @include border-line($bottom: 1px);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: #001626;
 }
 .menu-options {
     @include flex-row-center;

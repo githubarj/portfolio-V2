@@ -5,7 +5,7 @@ import { PiGithubLogoFill } from 'react-icons/pi';
 import React from 'react';
 const { Text } = Typography;
 
-const FooterContent = () => {
+const FooterContent = ({ isMobile }) => {
   const socials = [
     {
       title: 'GitHub',
@@ -32,9 +32,11 @@ const FooterContent = () => {
 
   return (
     <Flex align='center' className='footer'>
-      <Col className='footer__items'>
-        <Text>Find me on: </Text>
-      </Col>
+      {!isMobile ? (
+        <Col className='footer__items'>
+          <Text>Find me on: </Text>
+        </Col>
+      ) : null}
       {socials.map((item, index) => (
         <a
           href={item.link}

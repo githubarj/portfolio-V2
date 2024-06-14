@@ -39,6 +39,7 @@ const AppLayout = () => {
           fontFamily: 'Fira Code, monospace',
           colorTextBase: '#607B96',
           colorBgBase: '#001626',
+          
         },
         components: {
           Layout: {
@@ -79,7 +80,7 @@ const AppLayout = () => {
         </Layout>
 
         <Footer className='app-layout__footer'>
-          <FooterContent />
+          <FooterContent isMobile={isMobile} />
         </Footer>
       </Layout>
     </ConfigProvider>
