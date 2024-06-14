@@ -32,7 +32,9 @@
         }
         .body__content {
             flex: 1;
-           
+            .outlet {
+                padding: 5px 10px;
+            }
         }
     }
     &__footer {

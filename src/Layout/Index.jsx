@@ -1,4 +1,4 @@
-import { ConfigProvider, Layout } from 'antd';
+import { Col, ConfigProvider, Layout } from 'antd';
 import HeaderContent from './Components/HeaderContent';
 import FooterContent from './Components/FooterContent';
 import { useDispatch, useSelector } from 'react-redux';
@@ -72,7 +72,9 @@ const AppLayout = () => {
 
           <Content className='body__content'>
             <CustomBreadCrumb isMobile={isMobile} pathArray={pathArray} />
-            <Outlet />
+            <Col className='outlet'>
+              <Outlet />
+            </Col>
           </Content>
         </Layout>
 
