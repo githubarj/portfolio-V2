@@ -19,8 +19,8 @@ const Contact = () => {
       <Col
         style={{ display: 'flex', justifyContent: 'center' }}
         className='contact-container__form-col'
-        sm={10}
-        xs={24}
+        lg={10}
+        md={24}
       >
         <Form
           style={{ width: '90%' }}
@@ -40,13 +40,13 @@ const Contact = () => {
             <TextArea rows={4} />
           </Form.Item>
           <Button
-            style={{ background: ' rgba(96, 123, 150, 0.88)',  color: 'white'}}
+            style={{ background: ' rgba(96, 123, 150, 0.88)', color: 'white' }}
           >
             Default Button
           </Button>
         </Form>
       </Col>
-      <Col style={{ display: 'flex', justifyContent: 'center' }} sm={13} xs={0}>
+      <Col style={{ display: 'flex', justifyContent: 'center' }} lg={13} md={0}>
         <FormDisplay formValues={formValues} />
       </Col>
     </Row>
