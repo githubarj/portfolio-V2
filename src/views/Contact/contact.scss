@@ -1,9 +1,15 @@
 @use "../../sass//mixins";
 
 .contact-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
     &__form-col {
         @include flex-column-center;
         width: 80%;
         @include border-line($right: 1px);
+    }
+    &__code {
+    
     }
 }

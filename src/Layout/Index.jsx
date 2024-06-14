@@ -79,7 +79,7 @@ const AppLayout = () => {
         </Layout>
 
         <Footer className='app-layout__footer'>
-          <FooterContent />
+          <FooterContent isMobile={isMobile} />
         </Footer>
       </Layout>
     </ConfigProvider>

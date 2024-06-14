@@ -20,7 +20,7 @@
             color: inherit;
         }
     }
-    a:nth-child(5) {
+    a:nth-last-child(1) {
         margin-left: auto;
         padding-left: 15px;
         padding-right: 0;
@@ -29,7 +29,14 @@
 
         @media (max-width: 576px) {
             margin-left: 0;
-            @include border-line($left: 0px);
+            @include border-line($left: 0px, $right: 1px);
+            order: -1;
+        }
+    }
+
+    a:nth-child(1) {
+        @media (max-width: 576px) {
+            display: none;
         }
     }
 
