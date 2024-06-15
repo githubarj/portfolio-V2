@@ -71,6 +71,7 @@ const NavigationMenu = () => {
         },
       }}
     >
+      {/* TODO set selectedKeys manually for the projects path so that on route change the page has keys Selected */}
       <Menu
         multiple={path === 'projects'}
         className='navigation-menu'

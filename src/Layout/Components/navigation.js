@@ -18,6 +18,7 @@ import { SiSolidity } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 // TODO check if there is a way to just add to the relative path here especially just change the :id
+
 const optionsLabel = (title, parent) => {
   return React.createElement(
     Link,
@@ -126,13 +127,13 @@ export const projectsItems = [
     key: 'projects',
     label: 'Projects',
     children: [
-      { key: 'React', label: filterLabel('React', FaReact) },
-      { key: 'JavaScript', label: filterLabel('JavaScript', IoLogoJavascript) },
-      { key: 'Rust', label: filterLabel('Rust', FaRust) },
-      { key: 'HTML', label: filterLabel('HTML', FaHtml5) },
-      { key: 'CSS', label: filterLabel('CSS', FaCss3) },
-      { key: 'Solidity', label: filterLabel('Solidity', SiSolidity) },
-      { key: 'Bash', label: filterLabel('Bash', SiGnubash) },
+      { key: 'react', label: filterLabel('React', FaReact) },
+      { key: 'javascript', label: filterLabel('JavaScript', IoLogoJavascript) },
+      { key: 'rust', label: filterLabel('Rust', FaRust) },
+      { key: 'html', label: filterLabel('HTML', FaHtml5) },
+      { key: 'css', label: filterLabel('CSS', FaCss3) },
+      { key: 'solidity', label: filterLabel('Solidity', SiSolidity) },
+      { key: 'bash', label: filterLabel('Bash', SiGnubash) },
     ],
   },
 ];

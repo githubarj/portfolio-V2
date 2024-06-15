@@ -34,7 +34,7 @@ const openKeysSlice = createSlice({
       state.value = action.payload;
     },
     addOpenKeys: (state, action) => {
-      state.value.push(action.payload);
+      action.payload.map((item) => state.value.push(item));
     },
   },
 });

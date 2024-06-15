@@ -1,10 +1,18 @@
 import { Col, ConfigProvider, Form, Row } from 'antd';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CodeDisplay from './Components/CodeDisplay';
 import ContactForm from './Components/ContactForm';
+import { useEffect } from 'react';
+import { addOpenKeys } from '../../redux/slices/navSlice';
 
 const Contact = () => {
+  const dispatch = useDispatch();
   const isMobile = useSelector((state) => state.layout.isMobile.value);
+
+  useEffect(() => {
+    dispatch(addOpenKeys(['contacts', 'find-me-also-on']));
+  }, []);
+
   const [form] = Form.useForm();
 
   const formValues = {
@@ -31,8 +39,8 @@ const Contact = () => {
             colorPrimaryHover: '#334854',
           },
           Input: {
-            // TODO chnage color of inactive bg of inputs to #011221 in order for phone users to see
             activeBg: '#011221',
+            colorFillTertiary: '#011221',
             colorErrorBg: '#051B2B',
           },
         },
