@@ -8,7 +8,14 @@ const customStyle = {
   fontSize: '14px',
 };
 
-const FormDisplay = ({ formValues }) => {
+// #TODO add todays date in place of the random date
+
+const today = new Date();
+const formattedDate = `${today.toLocaleString('en', {
+  weekday: 'short',
+})} ${today.getDate()} ${today.toLocaleString('en', { month: 'short' })}`;
+
+const CodeDisplay = ({ formValues }) => {
   return (
     <SyntaxHighlighter
       wrapLongLines
@@ -23,7 +30,7 @@ const FormDisplay = ({ formValues }) => {
         name: "${formValues.name || ''}",
         email: "${formValues.email || ''}",
         message: "${formValues.message || ''}",
-        date: "Thu 21 Apr"
+        date: "${formattedDate}"
     }
 
     button.addEventListener('click', () => {
@@ -33,4 +40,4 @@ const FormDisplay = ({ formValues }) => {
   );
 };
 
-export default FormDisplay;
+export default CodeDisplay;

@@ -1,6 +1,6 @@
 import { Button, Col, ConfigProvider, Form, Input, Row } from 'antd';
-import FormDisplay from './Components/FormDisplay';
 import { useSelector } from 'react-redux';
+import CodeDisplay from './Components/CodeDisplay';
 
 const { TextArea } = Input;
 
@@ -73,7 +73,7 @@ const Contact = () => {
               rules={[
                 {
                   required: true,
-                  // message: '_email should have a value!',
+                  message: '_email should have a value!',
                 },
                 {
                   type: 'email',
@@ -110,7 +110,7 @@ const Contact = () => {
             md={24}
             sm={24}
           >
-            <FormDisplay formValues={formValues} />
+            <CodeDisplay formValues={formValues} />
           </Col>
         ) : null}
       </Row>

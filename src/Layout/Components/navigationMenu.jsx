@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { aboutItems, projectsItems, contactItems } from './navigation';
 import useRouting from '../../hooks/useRouting';
 
-// TODO : Fix the menus on this page - route switching and persistence in openKeys across routes, move state management to redux
-
+// TODO: Fix the menus on this page - route switching and persistence in openKeys across routes, move state management to redux
+// TODO: clikcable link to open gmail
 const getLevelKeys = (items1) => {
   const key = {};
   const func = (items2, level = 1) => {

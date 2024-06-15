@@ -12,6 +12,7 @@ import {
   FaHtml5,
   FaCss3,
   FaRust,
+  FaPhoneAlt,
 } from 'react-icons/fa';
 import { SiGnubash } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
@@ -110,7 +111,7 @@ export const aboutItems = [
       },
       {
         key: 'phone',
-        icon: React.createElement(FaPhone),
+        icon: React.createElement(FaPhoneAlt),
         label: '+254 798320724',
       },
     ],
@@ -145,14 +146,14 @@ export const contactItems = [
       },
       {
         key: 'phone',
-        icon: React.createElement(FaPhone),
+        icon: React.createElement(FaPhoneAlt),
         label: '+254 798320724',
       },
     ],
   },
   {
     key: 'find-me-also-on',
-    label: 'find-me-aslo-on',
+    label: 'find-me-also-on',
     children: [
       {
         key: 'github',
