@@ -1,19 +1,12 @@
 import { ConfigProvider, Menu } from 'antd';
-import { useState } from 'react';
 import { aboutItems, projectsItems, contactItems } from './navigation';
 import useRouting from '../../hooks/useRouting';
-
-// TODO: Fix the menus on this page - route switching and persistence in openKeys across routes, move state management to redux
-// TODO: clikcable link to open gmail
+import { useDispatch, useSelector } from 'react-redux';
+import { setOpenKeys } from '../../redux/slices/navSlice';
 
 const NavigationMenu = () => {
-  const [stateOpenKeys, setStateOpenKeys] = useState([
-    'personal-info',
-    'bio',
-    'projects',
-    'contacts',
-    'find-me-also-on',
-  ]);
+  const stateOpenKeys = useSelector((state) => state.layout.openKeys.value);
+  const dispatch = useDispatch();
 
   const { pathArray } = useRouting();
 
@@ -54,16 +47,15 @@ const NavigationMenu = () => {
       const repeatIndex = openKeys
         .filter((key) => key !== currentOpenKey)
         .findIndex((key) => levelKeys[key] === levelKeys[currentOpenKey]);
-      setStateOpenKeys(
-        openKeys
-          // remove repeat key
-          .filter((_, index) => index !== repeatIndex)
-          // remove current level all child
-          .filter((key) => levelKeys[key] <= levelKeys[currentOpenKey])
+      dispatch(
+        setOpenKeys(
+          openKeys
+            .filter((_, index) => index !== repeatIndex)
+            .filter((key) => levelKeys[key] <= levelKeys[currentOpenKey])
+        )
       );
     } else {
-      // close
-      setStateOpenKeys(openKeys);
+      dispatch(setOpenKeys(openKeys));
     }
   };
 

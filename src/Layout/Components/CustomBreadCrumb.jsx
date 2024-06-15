@@ -38,7 +38,6 @@ const CustomBreadCrumb = ({ pathArray, isMobile }) => {
     }
   }
 
-  console.log(items);
 
   function itemRender(currentRoute, params, items, paths) {
     return <span className='bread-crumb-items'>{currentRoute.title}</span>;

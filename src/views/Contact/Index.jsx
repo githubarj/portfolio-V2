@@ -1,18 +1,11 @@
-import { Button, Col, ConfigProvider, Form, Input, Row } from 'antd';
+import { Col, ConfigProvider, Row } from 'antd';
 import { useSelector } from 'react-redux';
 import CodeDisplay from './Components/CodeDisplay';
-
-const { TextArea } = Input;
+import ContactForm from './Components/ContactForm';
 
 const Contact = () => {
   const isMobile = useSelector((state) => state.layout.isMobile.value);
-  const [form] = Form.useForm();
 
-  const formValues = {
-    name: Form.useWatch('name', form),
-    email: Form.useWatch('email', form),
-    message: Form.useWatch('message', form),
-  };
   return (
     <ConfigProvider
       theme={{
@@ -31,6 +24,7 @@ const Contact = () => {
             colorPrimaryHover: '#334854',
           },
           Input: {
+            // TODO chnage color of inactive bg of inputs to #011221 in order for phone users to see
             activeBg: '#011221',
             colorErrorBg: '#051B2B',
           },
@@ -45,62 +39,7 @@ const Contact = () => {
           md={24}
           sm={24}
         >
-          <Form
-            scrollToFirstError
-            size='large'
-            form={form}
-            variant='filled'
-            requiredMark='hidden'
-            layout='vertical'
-            autoComplete='off'
-          >
-            <Form.Item
-              name='name'
-              label='_name :'
-              requiredMark='hidden'
-              rules={[
-                {
-                  required: true,
-                  message: '_name should have a value!',
-                },
-              ]}
-            >
-              <Input allowClear />
-            </Form.Item>
-            <Form.Item
-              name='email'
-              label='_email :'
-              rules={[
-                {
-                  required: true,
-                  message: '_email should have a value!',
-                },
-                {
-                  type: 'email',
-                  message: 'enter a valid email',
-                },
-              ]}
-            >
-              <Input allowClear />
-            </Form.Item>
-            <Form.Item
-              name='message'
-              label='_message :'
-              rules={[
-                {
-                  required: true,
-                  message: '_message should have a value!',
-                },
-              ]}
-            >
-              <TextArea allowClear rows={4} />
-            </Form.Item>
-            <Form.Item>
-              <Button type='primary' htmlType='submit'>
-                submit-message
-              </Button>
-            </Form.Item>
-          </Form>
+          <ContactForm />
         </Col>
         {!isMobile ? (
           <Col
@@ -110,7 +49,7 @@ const Contact = () => {
             md={24}
             sm={24}
           >
-            <CodeDisplay formValues={formValues} />
+            <CodeDisplay />
           </Col>
         ) : null}
       </Row>

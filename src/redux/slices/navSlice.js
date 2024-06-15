@@ -1,6 +1,5 @@
 import { combineReducers, createSlice } from '@reduxjs/toolkit';
 
-
 const navSlice = createSlice({
   name: 'currentPage',
   initialState: {
@@ -12,8 +11,6 @@ const navSlice = createSlice({
     },
   },
 });
-
-
 
 const mobileSlice = createSlice({
   name: 'isMobile',
@@ -27,17 +24,29 @@ const mobileSlice = createSlice({
   },
 });
 
+const openKeysSlice = createSlice({
+  name: 'openKeys',
+  initialState: {
+    value: ['personal-info', 'bio', 'projects', 'contacts', 'find-me-also-on'],
+  },
+  reducers: {
+    setOpenKeys: (state, action) => {
+      state.value = action.payload;
+    },
+    addOpenKeys: (state, action) => {
+      state.value.push(action.payload);
+    },
+  },
+});
 
-
-
-
-
+export const { setOpenKeys, addOpenKeys } = openKeysSlice.actions;
 export const { navTo } = navSlice.actions;
 export const { resize } = mobileSlice.actions;
 
 const layoutReducer = combineReducers({
   currentPage: navSlice.reducer,
   isMobile: mobileSlice.reducer,
+  openKeys: openKeysSlice.reducer,
 });
 
 export default layoutReducer;

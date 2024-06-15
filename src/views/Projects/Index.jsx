@@ -1,10 +1,14 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addOpenKeys } from '../../redux/slices/navSlice';
 
 const Projects = () => {
-  return (
-    <div>
-      Hi
-    </div>
-  )
-}
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(addOpenKeys('projects'));
+  }, []);
 
-export default Projects
+  return <div>Hi</div>;
+};
+
+export default Projects;
