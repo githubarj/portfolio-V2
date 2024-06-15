@@ -5,21 +5,6 @@ import useRouting from '../../hooks/useRouting';
 
 // TODO: Fix the menus on this page - route switching and persistence in openKeys across routes, move state management to redux
 // TODO: clikcable link to open gmail
-const getLevelKeys = (items1) => {
-  const key = {};
-  const func = (items2, level = 1) => {
-    items2.forEach((item) => {
-      if (item.key) {
-        key[item.key] = level;
-      }
-      if (item.children) {
-        func(item.children, level + 1);
-      }
-    });
-  };
-  func(items1);
-  return key;
-};
 
 const NavigationMenu = () => {
   const [stateOpenKeys, setStateOpenKeys] = useState([
@@ -42,12 +27,28 @@ const NavigationMenu = () => {
       ? aboutItems
       : null;
 
+  const getLevelKeys = (items1) => {
+    const key = {};
+    const func = (items2, level = 1) => {
+      items2.forEach((item) => {
+        if (item.key) {
+          key[item.key] = level;
+        }
+        if (item.children) {
+          func(item.children, level + 1);
+        }
+      });
+    };
+    func(items1);
+    return key;
+  };
+
   const levelKeys = getLevelKeys(items);
 
   const onOpenChange = (openKeys) => {
     const currentOpenKey = openKeys.find(
       (key) => stateOpenKeys.indexOf(key) === -1
-    );
+    ); //gets the last item in the array
     // open
     if (currentOpenKey !== undefined) {
       const repeatIndex = openKeys

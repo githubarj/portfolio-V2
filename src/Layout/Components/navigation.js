@@ -1,11 +1,9 @@
-import { Checkbox } from 'antd';
 import React from 'react';
 import {
   FaFolderOpen,
   FaGraduationCap,
   FaRegAddressCard,
   FaMarkdown,
-  FaPhone,
   FaEnvelope,
   FaExternalLinkAlt,
   FaReact,
@@ -17,11 +15,16 @@ import {
 import { SiGnubash } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiSolidity } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
-const optionsLabel = (title) => {
+// TODO check if there is a way to just add to the relative path here especially just change the :id
+const optionsLabel = (title, parent) => {
   return React.createElement(
-    'div',
-    { className: 'menu-options ' },
+    Link,
+    {
+      className: 'menu-options ',
+      to: `about/personal-info/${parent}/${title}`,
+    },
     React.createElement(FaMarkdown),
     title
   );
@@ -48,11 +51,11 @@ export const aboutItems = [
         children: [
           {
             key: 'overview',
-            label: optionsLabel('Overview'),
+            label: optionsLabel('Overview', 'bio'),
           },
           {
             key: 'interests',
-            label: optionsLabel('Interests'),
+            label: optionsLabel('Interests', 'bio'),
           },
         ],
       },
@@ -63,23 +66,23 @@ export const aboutItems = [
         children: [
           {
             key: 'software-developer',
-            label: optionsLabel('software-developer'),
+            label: optionsLabel('software-developer', 'experience'),
           },
           {
             key: 'it-officer',
-            label: optionsLabel('it-officer'),
+            label: optionsLabel('it-officer', 'experience'),
           },
           {
             key: 'voluntee-librarian',
-            label: optionsLabel('voluntee-librarian'),
+            label: optionsLabel('voluntee-librarian', 'experience'),
           },
           {
             key: 'attachee',
-            label: optionsLabel('attachee'),
+            label: optionsLabel('attachee', 'experience'),
           },
           {
             key: 'stem-teacher',
-            label: optionsLabel('stem-teacher'),
+            label: optionsLabel('stem-teacher', 'experience'),
           },
         ],
       },
@@ -90,11 +93,11 @@ export const aboutItems = [
         children: [
           {
             key: 'alliance-hs',
-            label: optionsLabel('alliance-hs'),
+            label: optionsLabel('alliance-hs', 'education'),
           },
           {
             key: 'strathmore-uni',
-            label: optionsLabel('strathmore-uni'),
+            label: optionsLabel('strathmore-uni', 'education'),
           },
         ],
       },

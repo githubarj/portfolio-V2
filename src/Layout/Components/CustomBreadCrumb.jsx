@@ -9,11 +9,11 @@ const CustomBreadCrumb = ({ pathArray, isMobile }) => {
       case 'bio':
         menuItems = aboutItems[0].children[0].children; //accessing deeply nested prop of children with they keys I want
         break;
-      case 'experince':
-        menuItems = aboutItems[1].children[1].children;
+      case 'experience':
+        menuItems = aboutItems[0].children[1].children;
         break;
       case 'education':
-        menuItems = aboutItems[2].children[1].children;
+        menuItems = aboutItems[0].children[2].children;
         break;
       default:
         menuItems = [];

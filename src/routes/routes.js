@@ -5,35 +5,54 @@ import Projects from '../views/Projects/Index';
 import Contact from '../views/Contact/Index';
 import About from '../views/About/Index';
 import { redirect } from 'react-router-dom';
-import PersonalInfo from '../views/About/Components/PersonalInfo/PersonalInfo';
-import Bio from '../views/About/Components/PersonalInfo/Bio';
+import Bio from '../views/About/Components/Bio/Bio';
+import Experience from '../views/About/Components/Experience/Experience';
+import Education from '../views/About/Components/Education/Education';
 
 export const routes = [
   {
     path: '/',
     element: React.createElement(AppLayout),
     children: [
-      { index: true, loader: async () => redirect('/hello') },
-      { path: 'hello', element: React.createElement(Home) },
       {
+        index: true,
+        loader: async () => redirect('/hello'),
+      },
+      {
+        path: 'hello',
+        element: React.createElement(Home),
+      },
+      {
+        // TODO check if I can target certain routes and have them redirect to wherever I want
         path: 'about',
         element: React.createElement(About),
         children: [
           {
-            path: 'personal-info',
-            element: React.createElement(PersonalInfo),
-            children: [
-              {
-                index: true,
-                path: 'bio/:id',
-                element: React.createElement(Bio),
-              },
-            ],
+            index: true,
+            loader: async () => redirect('personal-info/bio/overview'),
+          },
+          {
+            path: 'personal-info/bio/:id',
+            element: React.createElement(Bio),
+          },
+          {
+            path: 'personal-info/experience/:id',
+            element: React.createElement(Experience),
+          },
+          {
+            path: 'personal-info/education/:id',
+            element: React.createElement(Education),
           },
         ],
       },
-      { path: 'projects', element: React.createElement(Projects) },
-      { path: 'contact-me', element: React.createElement(Contact) },
+      {
+        path: 'projects',
+        element: React.createElement(Projects),
+      },
+      {
+        path: 'contact-me',
+        element: React.createElement(Contact),
+      },
     ],
   },
 ];
