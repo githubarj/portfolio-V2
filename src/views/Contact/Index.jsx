@@ -1,11 +1,25 @@
-import { Button, Col, ConfigProvider, Form, Input, Row } from 'antd';
-import FormDisplay from './Components/FormDisplay';
-import { useSelector } from 'react-redux';
+import { Button, Col, ConfigProvider, Form, Row, Typography } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
+import CodeDisplay from './Components/CodeDisplay';
+import ContactForm from './Components/ContactForm';
+import { useEffect, useState } from 'react';
+import { addOpenKeys } from '../../redux/slices/navSlice';
 
-const { TextArea } = Input;
+const { Text, Title } = Typography;
 
 const Contact = () => {
+  const dispatch = useDispatch();
   const isMobile = useSelector((state) => state.layout.isMobile.value);
+  const [thankYou, setThankYou] = useState(false);
+
+  const switchThankYou = () => {
+    setThankYou((prev) => !prev);
+  };
+
+  useEffect(() => {
+    dispatch(addOpenKeys(['contacts', 'find-me-also-on']));
+  }, []);
+
   const [form] = Form.useForm();
 
   const formValues = {
@@ -13,6 +27,7 @@ const Contact = () => {
     email: Form.useWatch('email', form),
     message: Form.useWatch('message', form),
   };
+
   return (
     <ConfigProvider
       theme={{
@@ -32,6 +47,7 @@ const Contact = () => {
           },
           Input: {
             activeBg: '#011221',
+            colorFillTertiary: '#011221',
             colorErrorBg: '#051B2B',
           },
         },
@@ -45,62 +61,20 @@ const Contact = () => {
           md={24}
           sm={24}
         >
-          <Form
-            scrollToFirstError
-            size='large'
-            form={form}
-            variant='filled'
-            requiredMark='hidden'
-            layout='vertical'
-            autoComplete='off'
-          >
-            <Form.Item
-              name='name'
-              label='_name :'
-              requiredMark='hidden'
-              rules={[
-                {
-                  required: true,
-                  message: '_name should have a value!',
-                },
-              ]}
-            >
-              <Input allowClear />
-            </Form.Item>
-            <Form.Item
-              name='email'
-              label='_email :'
-              rules={[
-                {
-                  required: true,
-                  // message: '_email should have a value!',
-                },
-                {
-                  type: 'email',
-                  message: 'enter a valid email',
-                },
-              ]}
-            >
-              <Input allowClear />
-            </Form.Item>
-            <Form.Item
-              name='message'
-              label='_message :'
-              rules={[
-                {
-                  required: true,
-                  message: '_message should have a value!',
-                },
-              ]}
-            >
-              <TextArea allowClear rows={4} />
-            </Form.Item>
-            <Form.Item>
-              <Button type='primary' htmlType='submit'>
-                submit-message
+          {!thankYou ? (
+            <ContactForm form={form} switchThankYou={switchThankYou} />
+          ) : (
+            <Col className='thank-you'>
+              <Title level='4'>Thank you! &#129304;</Title>
+              <Text>
+                Your message has been received. You will recieve answer really
+                soon!
+              </Text>
+              <Button type='primary' onClick={switchThankYou}>
+                send-a-new-message
               </Button>
-            </Form.Item>
-          </Form>
+            </Col>
+          )}
         </Col>
         {!isMobile ? (
           <Col
@@ -110,7 +84,7 @@ const Contact = () => {
             md={24}
             sm={24}
           >
-            <FormDisplay formValues={formValues} />
+            <CodeDisplay formValues={formValues} />
           </Col>
         ) : null}
       </Row>

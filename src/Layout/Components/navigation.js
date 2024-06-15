@@ -1,26 +1,31 @@
-import { Checkbox } from 'antd';
 import React from 'react';
 import {
   FaFolderOpen,
   FaGraduationCap,
   FaRegAddressCard,
   FaMarkdown,
-  FaPhone,
   FaEnvelope,
   FaExternalLinkAlt,
   FaReact,
   FaHtml5,
   FaCss3,
   FaRust,
+  FaPhoneAlt,
 } from 'react-icons/fa';
 import { SiGnubash } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiSolidity } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
-const optionsLabel = (title) => {
+// TODO check if there is a way to just add to the relative path here especially just change the :id
+
+const optionsLabel = (title, parent) => {
   return React.createElement(
-    'div',
-    { className: 'menu-options ' },
+    Link,
+    {
+      className: 'menu-options ',
+      to: `about/personal-info/${parent}/${title}`,
+    },
     React.createElement(FaMarkdown),
     title
   );
@@ -47,11 +52,11 @@ export const aboutItems = [
         children: [
           {
             key: 'overview',
-            label: optionsLabel('Overview'),
+            label: optionsLabel('Overview', 'bio'),
           },
           {
             key: 'interests',
-            label: optionsLabel('Interests'),
+            label: optionsLabel('Interests', 'bio'),
           },
         ],
       },
@@ -62,23 +67,23 @@ export const aboutItems = [
         children: [
           {
             key: 'software-developer',
-            label: optionsLabel('software-developer'),
+            label: optionsLabel('software-developer', 'experience'),
           },
           {
             key: 'it-officer',
-            label: optionsLabel('it-officer'),
+            label: optionsLabel('it-officer', 'experience'),
           },
           {
             key: 'voluntee-librarian',
-            label: optionsLabel('voluntee-librarian'),
+            label: optionsLabel('voluntee-librarian', 'experience'),
           },
           {
             key: 'attachee',
-            label: optionsLabel('attachee'),
+            label: optionsLabel('attachee', 'experience'),
           },
           {
             key: 'stem-teacher',
-            label: optionsLabel('stem-teacher'),
+            label: optionsLabel('stem-teacher', 'experience'),
           },
         ],
       },
@@ -89,11 +94,11 @@ export const aboutItems = [
         children: [
           {
             key: 'alliance-hs',
-            label: optionsLabel('alliance-hs'),
+            label: optionsLabel('alliance-hs', 'education'),
           },
           {
             key: 'strathmore-uni',
-            label: optionsLabel('strathmore-uni'),
+            label: optionsLabel('strathmore-uni', 'education'),
           },
         ],
       },
@@ -110,7 +115,7 @@ export const aboutItems = [
       },
       {
         key: 'phone',
-        icon: React.createElement(FaPhone),
+        icon: React.createElement(FaPhoneAlt),
         label: '+254 798320724',
       },
     ],
@@ -122,13 +127,13 @@ export const projectsItems = [
     key: 'projects',
     label: 'Projects',
     children: [
-      { key: 'React', label: filterLabel('React', FaReact) },
-      { key: 'JavaScript', label: filterLabel('JavaScript', IoLogoJavascript) },
-      { key: 'Rust', label: filterLabel('Rust', FaRust) },
-      { key: 'HTML', label: filterLabel('HTML', FaHtml5) },
-      { key: 'CSS', label: filterLabel('CSS', FaCss3) },
-      { key: 'Solidity', label: filterLabel('Solidity', SiSolidity) },
-      { key: 'Bash', label: filterLabel('Bash', SiGnubash) },
+      { key: 'react', label: filterLabel('React', FaReact) },
+      { key: 'javascript', label: filterLabel('JavaScript', IoLogoJavascript) },
+      { key: 'rust', label: filterLabel('Rust', FaRust) },
+      { key: 'html', label: filterLabel('HTML', FaHtml5) },
+      { key: 'css', label: filterLabel('CSS', FaCss3) },
+      { key: 'solidity', label: filterLabel('Solidity', SiSolidity) },
+      { key: 'bash', label: filterLabel('Bash', SiGnubash) },
     ],
   },
 ];
@@ -145,14 +150,14 @@ export const contactItems = [
       },
       {
         key: 'phone',
-        icon: React.createElement(FaPhone),
+        icon: React.createElement(FaPhoneAlt),
         label: '+254 798320724',
       },
     ],
   },
   {
     key: 'find-me-also-on',
-    label: 'find-me-aslo-on',
+    label: 'find-me-also-on',
     children: [
       {
         key: 'github',

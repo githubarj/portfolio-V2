@@ -46,6 +46,8 @@
             overflow-y: auto; // Enable vertical scrolling
             .outlet {
                 padding: 5px 10px;
+                display: flex;
+                justify-content: center;
             }
         }
     }
