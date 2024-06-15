@@ -5,7 +5,13 @@
     width: 100% !important;
     &__form-col {
         width: 80%;
-        form {
+        .thank-you {
+            justify-content: center;
+            height: 100%;
+            @include flex-column-center;
+            button {
+                margin-top: 20px;
+            }
         }
     }
     &__code {

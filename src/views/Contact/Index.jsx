@@ -1,13 +1,20 @@
-import { Col, ConfigProvider, Form, Row } from 'antd';
+import { Button, Col, ConfigProvider, Form, Row, Typography } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import CodeDisplay from './Components/CodeDisplay';
 import ContactForm from './Components/ContactForm';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { addOpenKeys } from '../../redux/slices/navSlice';
+
+const { Text, Title } = Typography;
 
 const Contact = () => {
   const dispatch = useDispatch();
   const isMobile = useSelector((state) => state.layout.isMobile.value);
+  const [thankYou, setThankYou] = useState(false);
+
+  const switchThankYou = () => {
+    setThankYou((prev) => !prev);
+  };
 
   useEffect(() => {
     dispatch(addOpenKeys(['contacts', 'find-me-also-on']));
@@ -54,7 +61,20 @@ const Contact = () => {
           md={24}
           sm={24}
         >
-          <ContactForm form={form} />
+          {!thankYou ? (
+            <ContactForm form={form} switchThankYou={switchThankYou} />
+          ) : (
+            <Col className='thank-you'>
+              <Title level='4'>Thank you! &#129304;</Title>
+              <Text>
+                Your message has been received. You will recieve answer really
+                soon!
+              </Text>
+              <Button type='primary' onClick={switchThankYou}>
+                send-a-new-message
+              </Button>
+            </Col>
+          )}
         </Col>
         {!isMobile ? (
           <Col

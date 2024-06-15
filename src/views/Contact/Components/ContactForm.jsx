@@ -1,13 +1,32 @@
 import { Button, Form, Input } from 'antd';
-
+import emailjs from '@emailjs/browser';
 
 const { TextArea } = Input;
- 
-const ContactForm = ({form}) => {
 
+const ContactForm = ({ form, switchThankYou }) => {
+  // TODO fix the email js functionality and implement the thank you for message page
+
+  const sendEmail = (values) => {
+    // e.preventDefault();
+    console.log(values);
+    emailjs
+      .sendForm('service_y9j6qq2', 'template_3enmvkg', values, {
+        publicKey: 'yeT6mDoMNVA7sdQmZ',
+      })
+
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
 
   return (
     <Form
+      onFinish={sendEmail}
       scrollToFirstError
       size='large'
       form={form}
