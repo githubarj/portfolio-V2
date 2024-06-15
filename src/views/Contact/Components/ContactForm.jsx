@@ -1,26 +1,9 @@
 import { Button, Form, Input } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFormValues } from '../../../redux/slices/contactInfoSlice';
-import { useEffect } from 'react';
+
 
 const { TextArea } = Input;
-
-const ContactForm = () => {
-  const [form] = Form.useForm();
-  const dispatch = useDispatch();
-
-  const formValues = {
-    name: Form.useWatch('name', form),
-    email: Form.useWatch('email', form),
-    message: Form.useWatch('message', form),
-  };
-
-  useEffect(() => {
-    dispatch(setFormValues(formValues));
-
-  }, [formValues, dispatch]);
-
  
+const ContactForm = ({form}) => {
 
 
   return (

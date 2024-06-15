@@ -8,7 +8,6 @@ const customStyle = {
   fontSize: '14px',
 };
 
-// #TODO add todays date in place of the random date
 
 const today = new Date();
 const formattedDate = `${today.toLocaleString('en', {

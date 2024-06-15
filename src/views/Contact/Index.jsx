@@ -1,10 +1,17 @@
-import { Col, ConfigProvider, Row } from 'antd';
+import { Col, ConfigProvider, Form, Row } from 'antd';
 import { useSelector } from 'react-redux';
 import CodeDisplay from './Components/CodeDisplay';
 import ContactForm from './Components/ContactForm';
 
 const Contact = () => {
   const isMobile = useSelector((state) => state.layout.isMobile.value);
+  const [form] = Form.useForm();
+
+  const formValues = {
+    name: Form.useWatch('name', form),
+    email: Form.useWatch('email', form),
+    message: Form.useWatch('message', form),
+  };
 
   return (
     <ConfigProvider
@@ -39,7 +46,7 @@ const Contact = () => {
           md={24}
           sm={24}
         >
-          <ContactForm />
+          <ContactForm form={form} />
         </Col>
         {!isMobile ? (
           <Col
@@ -49,7 +56,7 @@ const Contact = () => {
             md={24}
             sm={24}
           >
-            <CodeDisplay />
+            <CodeDisplay formValues={formValues} />
           </Col>
         ) : null}
       </Row>
