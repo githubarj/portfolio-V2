@@ -45,7 +45,7 @@ const CardComponent = (props) => {
             <div className='icons'>
               {categories.map((item) => (
                 <Tag
-                  icon={React.createElement(item.icon)}
+                  icon={React.createElement(item.icon, )}
                   key={uuidv4()}
                   bordered={false}
                 >
