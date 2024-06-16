@@ -38,13 +38,7 @@ const Contact = () => {
           colorErrorBgHover: '#011221',
         },
         components: {
-          Button: {
-            contentFontSizeLG: '12',
-            defaultColor: 'ffffff',
-            primaryShadow: '0',
-            colorPrimary: '#1C2B3A',
-            colorPrimaryHover: '#334854',
-          },
+       
           Input: {
             activeBg: '#011221',
             colorFillTertiary: '#011221',

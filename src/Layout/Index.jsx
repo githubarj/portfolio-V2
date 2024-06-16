@@ -39,7 +39,6 @@ const AppLayout = () => {
           fontFamily: 'Fira Code, monospace',
           colorTextBase: '#607B96',
           colorBgBase: '#001626',
-          
         },
         components: {
           Layout: {
@@ -50,6 +49,13 @@ const AppLayout = () => {
           },
           Menu: {
             itemBg: '001626',
+          },
+          Button: {
+            contentFontSizeLG: '12',
+            defaultColor: 'ffffff',
+            primaryShadow: '0',
+            colorPrimary: '#1C2B3A',
+            colorPrimaryHover: '#334854',
           },
         },
       }}
