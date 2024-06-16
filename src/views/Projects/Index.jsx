@@ -20,7 +20,6 @@ const Projects = () => {
     <>
       <FloatButton.BackTop
         style={{ bottom: '55px', right: '5px' }}
-        tooltip={<div>Scroll to top</div>}
         icon={<FaArrowUp />}
       />
 

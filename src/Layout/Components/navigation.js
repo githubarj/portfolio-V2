@@ -32,11 +32,11 @@ const optionsLabel = (title, parent) => {
   );
 };
 
-const filterLabel = (title, icon) => {
+const filterLabel = (title, icon, color) => {
   return React.createElement(
     'div',
     { className: 'filter-options' },
-    React.createElement(icon),
+    React.createElement(icon, { color: color }),
     title
   );
 };
@@ -125,7 +125,7 @@ export const aboutItems = [
 
 const projectMenus = filterIcons.map((item) => ({
   key: item.key,
-  label: filterLabel(item.label, item.icon),
+  label: filterLabel(item.label, item.icon, item.color),
 }));
 
 export const projectsItems = [
