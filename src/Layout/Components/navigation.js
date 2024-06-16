@@ -16,6 +16,7 @@ import { SiGnubash } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiSolidity } from 'react-icons/si';
 import { Link } from 'react-router-dom';
+import { filterIcons } from '../../views/Projects/Components/filterIcons';
 
 // TODO check if there is a way to just add to the relative path here especially just change the :id
 
@@ -122,19 +123,16 @@ export const aboutItems = [
   },
 ];
 
+const projectMenus = filterIcons.map((item) => ({
+  key: item.key,
+  label: filterLabel(item.label, item.icon),
+}));
+
 export const projectsItems = [
   {
     key: 'projects',
     label: 'Projects',
-    children: [
-      { key: 'react', label: filterLabel('React', FaReact) },
-      { key: 'javascript', label: filterLabel('JavaScript', IoLogoJavascript) },
-      { key: 'rust', label: filterLabel('Rust', FaRust) },
-      { key: 'html', label: filterLabel('HTML', FaHtml5) },
-      { key: 'css', label: filterLabel('CSS', FaCss3) },
-      { key: 'solidity', label: filterLabel('Solidity', SiSolidity) },
-      { key: 'bash', label: filterLabel('Bash', SiGnubash) },
-    ],
+    children: projectMenus,
   },
 ];
 
