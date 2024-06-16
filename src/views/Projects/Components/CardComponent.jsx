@@ -1,6 +1,15 @@
-import { Button, Card, Col, Flex, Skeleton, Tag, Typography } from 'antd';
+import {
+  Button,
+  Card,
+  Col,
+  Flex,
+  FloatButton,
+  Skeleton,
+  Tag,
+  Typography,
+} from 'antd';
 import React, { useEffect, useState } from 'react';
-import { FaCss3, FaReact } from 'react-icons/fa6';
+import { FaArrowUp, FaCss3, FaReact } from 'react-icons/fa6';
 import { filterIcons } from './filterIcons';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -35,7 +44,13 @@ const CardComponent = (props) => {
             <Text> {title} </Text>
             <div className='icons'>
               {categories.map((item) => (
-                <Tag icon={React.createElement(item.icon)} key={uuidv4()} bordered={false}>  </Tag>
+                <Tag
+                  icon={React.createElement(item.icon)}
+                  key={uuidv4()}
+                  bordered={false}
+                >
+                  {' '}
+                </Tag>
               ))}
             </div>
           </Flex>
