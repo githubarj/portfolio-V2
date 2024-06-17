@@ -53,11 +53,11 @@ export const aboutItems = [
         children: [
           {
             key: 'overview',
-            label: optionsLabel('Overview', 'bio'),
+            label: optionsLabel('overview', 'bio'),
           },
           {
             key: 'interests',
-            label: optionsLabel('Interests', 'bio'),
+            label: optionsLabel('interests', 'bio'),
           },
         ],
       },
@@ -71,16 +71,16 @@ export const aboutItems = [
             label: optionsLabel('software-developer', 'experience'),
           },
           {
-            key: 'it-officer',
-            label: optionsLabel('it-officer', 'experience'),
+            key: 'tech-support',
+            label: optionsLabel('tech-support', 'experience'),
           },
           {
             key: 'voluntee-librarian',
             label: optionsLabel('voluntee-librarian', 'experience'),
           },
           {
-            key: 'attachee',
-            label: optionsLabel('attachee', 'experience'),
+            key: 'tech-attachee',
+            label: optionsLabel('tech-attachee', 'experience'),
           },
           {
             key: 'stem-teacher',

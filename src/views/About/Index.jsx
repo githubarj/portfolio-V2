@@ -5,7 +5,6 @@ const About = () => {
   return (
     <MDXWrapper>
       <div style={{ padding: '5px 15px' }}>
-        About
         <Outlet />
       </div>
     </MDXWrapper>
