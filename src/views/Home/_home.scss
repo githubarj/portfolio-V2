@@ -1,13 +1,12 @@
-@use '../../sass/mixins';
+@use "../../sass/mixins";
 .home-container {
     padding: 7px 15px;
+   
     .intro-section {
         @include flex-row-center;
 
-            .intro-container{
+        .intro-container {
             height: 100%;
-
         }
-
-    }    
+    }
 }

@@ -7,6 +7,9 @@
 
 .app-layout {
     min-height: 100vh;
+    background-image:url("/background.png") ;
+    background-size: cover;
+    background-position: center;
 
     &__header {
         @include border-line($bottom: 1px);
