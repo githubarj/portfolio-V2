@@ -1,10 +1,10 @@
-
+import Overview from '../mdx/Overview.mdx';
 const Bio = () => {
   return (
     <div>
-      Bio
+      <Overview />
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;

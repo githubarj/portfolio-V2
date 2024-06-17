@@ -13,6 +13,10 @@
     "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/mdx": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@mdx-js/rollup": "^3.0.1",
     "@mui/material": "^5.15.19",
     "@reduxjs/toolkit": "^2.2.5",
     "antd": "^5.18.0",
@@ -25,7 +29,8 @@
     "react-router-dom": "^6.23.1",
     "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.77.4",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "vite-plugin-mdx": "^3.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
