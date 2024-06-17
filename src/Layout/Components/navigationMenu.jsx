@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setOpenKeys } from '../../redux/slices/navSlice';
 
 const NavigationMenu = () => {
+  // BUG open keys is allowing more than one to be open at a time
   const stateOpenKeys = useSelector((state) => state.layout.openKeys.value);
   const selectedKeys = useSelector((state) => state.layout.selectedKeys.value);
   const dispatch = useDispatch();
