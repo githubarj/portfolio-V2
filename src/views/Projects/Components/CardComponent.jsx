@@ -37,6 +37,7 @@ const CardComponent = (props) => {
   return (
     <Col className='projects-container__columns' {...layout}>
       {loading ? (
+        // TODO make this a fallback of a suspense or add a loader with a setTimeout 
         <Skeleton active />
       ) : (
         <>
