@@ -32,6 +32,8 @@ const AppLayout = () => {
     };
   }, [dispatch]);
 
+  // TODO add a colors objects to store all the colors for easier themeing or color switching
+
   return (
     <ConfigProvider
       theme={{

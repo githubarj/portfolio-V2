@@ -59,6 +59,13 @@ const NavigationMenu = () => {
     }
   };
 
+  const handleSelect = ({ item, key, keyPath, selectedKeys, domEvent }) => {
+    console.log(item);
+    console.log(key);
+    console.log(keyPath);
+    console.log(selectedKeys);
+  };
+
   return (
     <ConfigProvider
       theme={{
@@ -86,6 +93,7 @@ const NavigationMenu = () => {
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
         items={items}
+        onSelect={handleSelect}
       />
     </ConfigProvider>
   );
