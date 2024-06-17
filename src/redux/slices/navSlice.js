@@ -39,15 +39,18 @@ const openKeysSlice = createSlice({
   },
 });
 
-const selectedKeys = createSlice({
+const selectedKeysSlice = createSlice({
   name: 'selectedKeys',
   initialState: {
     value: ['personal-info', 'bio', 'overview', 'React', 'Solidity'],
   },
   reducers: {
-    setSelectedKeys: (state, action) => {
+    initializeSelectedKeys: (state, action) => {
       state.value = action.payload;
       //takes in an array with only one value - for menus which only once can be selected at a time
+    },
+    setSelectedKeys: (state, action) => {
+      state.value.splice(-1, 1, action.payload);
     },
     addSelectedKeys: (state, action) => {
       action.payload.map((item) => state.value.push(item));
@@ -59,11 +62,13 @@ const selectedKeys = createSlice({
 export const { setOpenKeys, addOpenKeys } = openKeysSlice.actions;
 export const { navTo } = navSlice.actions;
 export const { resize } = mobileSlice.actions;
-
+export const { addSelectedKeys, setSelectedKeys, initializeSelectedKeys } =
+  selectedKeysSlice.actions;
 const layoutReducer = combineReducers({
   currentPage: navSlice.reducer,
   isMobile: mobileSlice.reducer,
   openKeys: openKeysSlice.reducer,
+  selectedKeys: selectedKeysSlice.reducer,
 });
 
 export default layoutReducer;

@@ -24,17 +24,20 @@
             background-color: $primary-dark-blue;
             flex: 1;
             @extend %flex-column;
+            cursor: default;
 
             .ant-card-body {
                 flex: 1;
                 @extend %flex-column;
                 align-items: flex-start;
-                span {
-                    margin-bottom: 5px;
-                }
+                padding: 12px 12px 8px 12px;
 
                 button {
                     margin-top: auto;
+                    color: #2c8ac7;
+                    &:hover {
+                        color: $accent-peach;
+                    }
                 }
             }
         }
@@ -42,7 +45,6 @@
             @include flex-row-center;
             span {
                 padding: 1px;
-                color: #607B96;
                 display: flex;
                 background-color: transparent;
             }

@@ -6,15 +6,8 @@ import {
   FaMarkdown,
   FaEnvelope,
   FaExternalLinkAlt,
-  FaReact,
-  FaHtml5,
-  FaCss3,
-  FaRust,
   FaPhoneAlt,
 } from 'react-icons/fa';
-import { SiGnubash } from 'react-icons/si';
-import { IoLogoJavascript } from 'react-icons/io5';
-import { SiSolidity } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import { filterIcons } from '../../views/Projects/Components/filterIcons';
 

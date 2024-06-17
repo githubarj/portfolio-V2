@@ -21,7 +21,7 @@ export const filterIcons = [
     key: 'javascript',
     label: 'JavaScript',
     icon: SiJavascript,
-    color: '#f7df1e',
+    color: '#c6b313',
   },
   {
     key: 'rust',
@@ -59,7 +59,7 @@ export const filterIcons = [
     key: 'solidity',
     label: 'Solidity',
     icon: SiSolidity,
-    color: '#363636',
+    color: '#565656',
   },
   {
     key: 'bash',
@@ -71,6 +71,6 @@ export const filterIcons = [
     key: 'firebase',
     label: 'Firebase',
     icon: IoLogoFirebase,
-    color: '#FFCA28',
+    color: '#E6B31A',
   },
 ];
