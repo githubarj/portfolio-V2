@@ -1,8 +1,7 @@
 import { Breadcrumb, Col } from 'antd';
-import { Link } from 'react-router-dom';
 import { aboutItems } from './navigation';
 
-const CustomBreadCrumb = ({ pathArray, isMobile }) => {
+const CustomBreadCrumb = ({ pathArray }) => {
   let menuItems = [];
   if (pathArray[2]) {
     switch (pathArray[2]) {
@@ -37,7 +36,6 @@ const CustomBreadCrumb = ({ pathArray, isMobile }) => {
       }
     }
   }
-
 
   function itemRender(currentRoute, params, items, paths) {
     return <span className='bread-crumb-items'>{currentRoute.title}</span>;

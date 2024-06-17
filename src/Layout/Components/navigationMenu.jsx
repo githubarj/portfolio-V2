@@ -5,7 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setOpenKeys } from '../../redux/slices/navSlice';
 
 const NavigationMenu = () => {
+  // BUG open keys is allowing more than one to be open at a time
   const stateOpenKeys = useSelector((state) => state.layout.openKeys.value);
+  const selectedKeys = useSelector((state) => state.layout.selectedKeys.value);
   const dispatch = useDispatch();
 
   const { pathArray } = useRouting();
@@ -59,13 +61,6 @@ const NavigationMenu = () => {
     }
   };
 
-  const handleSelect = ({ item, key, keyPath, selectedKeys, domEvent }) => {
-    console.log(item);
-    console.log(key);
-    console.log(keyPath);
-    console.log(selectedKeys);
-  };
-
   return (
     <ConfigProvider
       theme={{
@@ -78,22 +73,20 @@ const NavigationMenu = () => {
         },
       }}
     >
-      {/* TODO set selectedKeys manually for the projects path so that on route change the page has keys Selected */}
+      {/* TODO set selectedKeys manually for the projects path so that one can get a link with selected results
+      
+      also look into how to make a function to control the selected keys so that they can be set by any actor
+
+      */}
+
       <Menu
         multiple={path === 'projects'}
         className='navigation-menu'
         mode='inline'
-        defaultSelectedKeys={[
-          'personal-info',
-          'bio',
-          'overview',
-          'React',
-          'Solidity',
-        ]}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}
         items={items}
-        onSelect={handleSelect}
+        defaultSelectedKeys={selectedKeys}
       />
     </ConfigProvider>
   );

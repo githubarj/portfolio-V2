@@ -44,10 +44,13 @@
         .body__content {
             flex: 1;
             overflow-y: auto; // Enable vertical scrolling
+            display: flex;
+            flex-direction: column;
             .outlet {
                 padding: 5px 10px;
                 display: flex;
                 justify-content: center;
+                flex: 1;
             }
             @media (max-width: 576px) {
                 margin-bottom: 40px;

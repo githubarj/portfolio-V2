@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { resize } from '../redux/slices/navSlice';
 import NavigationMenu from './Components/navigationMenu';
-import { Outlet, } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import useRouting from '../hooks/useRouting';
 import CustomBreadCrumb from './Components/CustomBreadCrumb';
 
@@ -80,7 +80,9 @@ const AppLayout = () => {
             ))}
 
           <Content className='body__content'>
-            <CustomBreadCrumb isMobile={isMobile} pathArray={pathArray} />
+            {path !== 'hello' ? (
+              <CustomBreadCrumb pathArray={pathArray} />
+            ) : null}
             <Col className='outlet'>
               <Outlet />
             </Col>

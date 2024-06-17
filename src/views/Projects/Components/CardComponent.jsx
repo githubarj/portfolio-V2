@@ -37,7 +37,7 @@ const CardComponent = (props) => {
   return (
     <Col className='projects-container__columns' {...layout}>
       {loading ? (
-        // TODO make this a fallback of a suspense or add a loader with a setTimeout 
+        // TODO make this a fallback of a suspense or add a loader with a setTimeout
         <Skeleton active />
       ) : (
         <>
@@ -46,12 +46,10 @@ const CardComponent = (props) => {
             <div className='icons'>
               {categories.map((item) => (
                 <Tag
-                  icon={React.createElement(item.icon, )}
+                  icon={React.createElement(item.icon, { color: item.color })}
                   key={uuidv4()}
                   bordered={false}
-                >
-                  {' '}
-                </Tag>
+                ></Tag>
               ))}
             </div>
           </Flex>
@@ -72,7 +70,7 @@ const CardComponent = (props) => {
             }
           >
             <Text> {description} </Text>
-            <Button type='primary'> show-details </Button>
+            <Button type='link'> link &gt; </Button>
           </Card>
         </>
       )}
