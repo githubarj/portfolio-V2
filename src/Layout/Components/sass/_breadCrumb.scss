@@ -7,6 +7,12 @@
     top: 0;
     z-index: 99;
     background: #001626;
+    ol {
+        cursor: default;
+        li:last-child {
+            cursor: pointer !important;
+        }
+    }
 }
 .menu-options {
     @include flex-row-center;

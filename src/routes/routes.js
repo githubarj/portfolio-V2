@@ -32,15 +32,15 @@ export const routes = [
             loader: async () => redirect('personal-info/bio/overview'),
           },
           {
-            path: 'personal-info/bio/:id',
+            path: 'personal-info/bio/:file',
             element: React.createElement(Bio),
           },
           {
-            path: 'personal-info/experience/:id',
+            path: 'personal-info/experience/:file',
             element: React.createElement(Experience),
           },
           {
-            path: 'personal-info/education/:id',
+            path: 'personal-info/education/:file',
             element: React.createElement(Education),
           },
         ],
