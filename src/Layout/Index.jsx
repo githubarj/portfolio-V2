@@ -80,7 +80,9 @@ const AppLayout = () => {
             ))}
 
           <Content className='body__content'>
-            <CustomBreadCrumb pathArray={pathArray} />
+            {path !== 'hello' ? (
+              <CustomBreadCrumb pathArray={pathArray} />
+            ) : null}
             <Col className='outlet'>
               <Outlet />
             </Col>
