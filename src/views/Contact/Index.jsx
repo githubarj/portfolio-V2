@@ -16,8 +16,9 @@ const Contact = () => {
     setThankYou((prev) => !prev);
   };
 
+
   useEffect(() => {
-    dispatch(addOpenKeys(['contacts', 'find-me-also-on']));
+    dispatch(addOpenKeys(isMobile ? [] : ['contacts', 'find-me-also-on']));
   }, []);
 
   const [form] = Form.useForm();

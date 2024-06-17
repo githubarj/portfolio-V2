@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addOpenKeys } from '../../redux/slices/navSlice';
 import { Col, FloatButton, Row } from 'antd';
 import CardComponent from './Components/CardComponent';
@@ -9,12 +9,10 @@ import { FaArrowUp } from 'react-icons/fa6';
 
 const Projects = () => {
   const dispatch = useDispatch();
-
+  const isMobile = useSelector((state) => state.layout.isMobile.value);
   useEffect(() => {
-    dispatch(addOpenKeys(['projects']));
+    dispatch(addOpenKeys(isMobile ? [] : ['projects']));
   }, []);
-
-  
 
   return (
     <>
