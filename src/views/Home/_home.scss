@@ -2,7 +2,12 @@
 .home-container {
     padding: 7px 15px;
     .intro-section {
-        @include flex-row-center
+        @include flex-row-center;
+
+            .intro-container{
+            height: 100%;
+
+        }
 
     }    
 }

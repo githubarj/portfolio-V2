@@ -40,13 +40,13 @@
             min-width: 265px !important;
             overflow-y: auto; // Enable vertical scrolling
         }
-
         .body__content {
             flex: 1;
             overflow-y: auto; // Enable vertical scrolling
             display: flex;
             flex-direction: column;
             .outlet {
+                // TODO set global padding on the contents rendered here
                 padding: 5px 10px;
                 display: flex;
                 justify-content: center;

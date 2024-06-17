@@ -32,7 +32,6 @@ const CardComponent = (props) => {
   };
 
   const categories = filterIcons.filter((item) => category.includes(item.key));
-  console.log(categories);
 
   return (
     <Col className='projects-container__columns' {...layout}>

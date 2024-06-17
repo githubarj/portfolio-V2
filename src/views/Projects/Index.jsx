@@ -14,7 +14,7 @@ const Projects = () => {
     dispatch(addOpenKeys(['projects']));
   }, []);
 
-  // TODO restrict the view width so stop rocking and prevent body being scrollable
+  
 
   return (
     <>

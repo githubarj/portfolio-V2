@@ -11,7 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 import { filterIcons } from '../../views/Projects/Components/filterIcons';
 
-// TODO check if there is a way to just add to the relative path here especially just change the :id
+
 
 const optionsLabel = (title, parent) => {
   return React.createElement(

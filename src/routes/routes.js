@@ -23,7 +23,7 @@ export const routes = [
         element: React.createElement(Home),
       },
       {
-        // TODO check if I can target certain routes and have them redirect to wherever I want
+       
         path: 'about',
         element: React.createElement(About),
         children: [
