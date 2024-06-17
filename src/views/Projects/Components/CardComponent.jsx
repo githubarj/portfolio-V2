@@ -1,15 +1,5 @@
-import {
-  Button,
-  Card,
-  Col,
-  Flex,
-  FloatButton,
-  Skeleton,
-  Tag,
-  Typography,
-} from 'antd';
-import React, { useEffect, useState } from 'react';
-import { FaArrowUp, FaCss3, FaReact } from 'react-icons/fa6';
+import { Button, Card, Col, Flex, Skeleton, Tag, Typography } from 'antd';
+import React, { Suspense, useEffect, useState } from 'react';
 import { filterIcons } from './filterIcons';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -20,7 +10,7 @@ const CardComponent = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 200);
   });
 
   const { description, category, title, link, image } = props;
@@ -36,11 +26,25 @@ const CardComponent = (props) => {
   return (
     <Col className='projects-container__columns' {...layout}>
       {loading ? (
-        // TODO make this a fallback of a suspense or add a loader with a setTimeout
         <Skeleton active />
       ) : (
         <>
-          <Flex justify='space-between' align='center'>
+          {/* TODO make this a fallback of a suspense or add a loader with a setTimeout */}
+          <Skeleton
+            active
+            style={{
+              display: loading ? 'block' : 'none',
+              position: 'absolute',
+            }}
+          />
+          {/* <Suspense fallback={<Skeleton />}> find out how to use suspense and hot it works */}
+          <Flex
+            justify='space-between'
+            align='center'
+            style={{
+              display: !loading ? 'flex' : 'none',
+            }}
+          >
             <Text> {title} </Text>
             <div className='icons'>
               {categories.map((item) => (
@@ -53,6 +57,9 @@ const CardComponent = (props) => {
             </div>
           </Flex>
           <Card
+            style={{
+              display: !loading ? 'flex' : 'none',
+            }}
             bordered={false}
             size='small'
             className='projects-card'
@@ -71,6 +78,7 @@ const CardComponent = (props) => {
             <Text> {description} </Text>
             <Button type='link'> link &gt; </Button>
           </Card>
+          {/* </Suspense> */}
         </>
       )}
     </Col>

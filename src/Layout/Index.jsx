@@ -8,7 +8,7 @@ import NavigationMenu from './Components/navigationMenu';
 import { Outlet } from 'react-router-dom';
 import useRouting from '../hooks/useRouting';
 import CustomBreadCrumb from './Components/CustomBreadCrumb';
-import BackgroundImage from '../../public/background.png';
+import BackgroundImage from './assets/background.png';
 
 const { Header, Footer, Sider, Content } = Layout;
 
