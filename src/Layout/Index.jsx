@@ -8,6 +8,7 @@ import NavigationMenu from './Components/navigationMenu';
 import { Outlet } from 'react-router-dom';
 import useRouting from '../hooks/useRouting';
 import CustomBreadCrumb from './Components/CustomBreadCrumb';
+import BackgroundImage from '../../public/background.png';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -44,10 +45,10 @@ const AppLayout = () => {
         },
         components: {
           Layout: {
-            headerBg: '#001626',
-            siderBg: '#001626',
-            bodyBg: '#001626',
-            footerBg: '#001626',
+            headerBg: isMobile && path === 'hello' ? 'none' : '#001626',
+            siderBg: isMobile && path === 'hello' ? 'none' : '#001626',
+            bodyBg: isMobile && path === 'hello' ? 'none' : '#001626',
+            footerBg: isMobile && path === 'hello' ? 'none' : '#001626',
           },
           Menu: {
             itemBg: '001626',
@@ -62,7 +63,12 @@ const AppLayout = () => {
         },
       }}
     >
-      <Layout className='app-layout'>
+      <Layout
+        className='app-layout'
+        style={{
+          backgroundImage: `url(${BackgroundImage})`,
+        }}
+      >
         <Header className='app-layout__header'>
           <HeaderContent isMobile={isMobile} />
         </Header>
