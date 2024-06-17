@@ -34,7 +34,7 @@ const AppLayout = () => {
   }, [dispatch]);
 
   // TODO add a colors objects to store all the colors for easier themeing or color switching
-
+  // TODO find out if you can implement lazy loading for background images
   return (
     <ConfigProvider
       theme={{
@@ -45,10 +45,10 @@ const AppLayout = () => {
         },
         components: {
           Layout: {
-            headerBg: '#001626',
-            siderBg: '#001626',
+            headerBg: isMobile && path === 'hello' ? 'none' : '#001626',
+            siderBg: isMobile && path === 'hello' ? 'none' : '#001626',
             bodyBg: isMobile && path === 'hello' ? 'none' : '#001626',
-            footerBg: '#001626',
+            footerBg: isMobile && path === 'hello' ? 'none' : '#001626',
           },
           Menu: {
             itemBg: '001626',
