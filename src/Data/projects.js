@@ -11,9 +11,9 @@ const projectsData = [
     image: '/assets/projectImages/disneyplus.png',
     title: 'Disney Plus Clone',
     link: 'https://disneypluscloneke.netlify.app',
-    category: ['react, firebase'],
+    category: ['react', 'firebase'],
     description:
-      'Created a clone of the disny plus home page with firebase authentication and data storage, styled using styled components in react',
+      'Created a clone of the disney plus home page with firebase authentication and data storage, styled using styled components in react',
   },
   {
     image: '/assets/projectImages/markdownnotes.png',
@@ -42,12 +42,11 @@ const projectsData = [
   },
 
   {
-    image: '/public/assets/projectImages/changia.png',
+    image: '/assets/projectImages/changia.png',
     title: 'Changia',
     link: 'https://changiake.netlify.app/',
-    category: ['react'],
-    description:
-      'WIP.Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react',
+    category: ['react', 'sass', 'material-ui'],
+    description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
   },
   {
     image: '/assets/projectImages/perfectsquare1.png',
