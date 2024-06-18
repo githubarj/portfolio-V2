@@ -1,6 +1,6 @@
 const projectsData = [
   {
-    image: '/assets/perfect-square-v2.png',
+    image: '/assets/projectImages/perfectsquare2.png',
     title: 'Perfect square V2',
     link: 'https://perfectsquare.cc/',
     category: ['react', 'firebase'],
@@ -8,37 +8,62 @@ const projectsData = [
       'Responsive company website using React, Vite, and Firebase for fast performance and real-time updates.',
   },
   {
-    image: '/assets/portfolio.png',
-    title: 'Portfolio V1',
-    link: 'https://celadon-empanada-0a066e.netlify.app/',
-    category: ['react'],
+    image: '/assets/projectImages/disneyplus.png',
+    title: 'Disney Plus Clone',
+    link: 'https://disneypluscloneke.netlify.app',
+    category: ['react, firebase'],
     description:
-      'This is the first version of my portfolio built with react + vite, fully responsive, hosted on netifly',
-  },
-
-  {
-    image: '/assets/changia.png',
-    title: 'Changia',
-    link: 'https://glistening-gumption-23fb60.netlify.app/',
-    category: ['react'],
-    description:
-      'Startup that seeks to connect various residential care facilities with donors and volunteers',
+      'Created a clone of the disny plus home page with firebase authentication and data storage, styled using styled components in react',
   },
   {
-    image: '/assets/markdown-notes.png',
+    image: '/assets/projectImages/markdownnotes.png',
     title: 'Markdown Notes',
-    link: 'https://celadon-empanada-0a066e.netlify.app/',
+    link: 'https://markdownnoteske.netlify.app/',
     category: ['react', 'firebase'],
     description:
       'An applications that allows a user to write and preview markdown and save to firebase',
   },
+
   {
-    image: '/assets/perfect-square-v1.png',
-    title: 'Perfect Square v1',
-    link: 'https://gentle-malabi-a9ce64.netlify.app/',
+    image: '/assets/projectImages/portfolio1.png',
+    title: 'Portfolio V1',
+    link: 'https://resplendent-crepe-5a486a.netlify.app/',
     category: ['react'],
     description:
-      'This is the firstversion of the perfect square site, used as a prototype',
+      'This is the first version of my portfolio built with react + vite, fully responsive, hosted on netifly',
+  },
+  {
+    image: '/assets/projectImages/vanslife.png',
+    title: 'Vans Life',
+    link: 'https://githubavanslife.netlify.app/',
+    category: ['react'],
+    description:
+      'This is a project done in react with heavy use of react router dom v6 to practice on their data API routes with loaders and auth',
+  },
+
+  {
+    image: '/public/assets/projectImages/changia.png',
+    title: 'Changia',
+    link: 'https://changiake.netlify.app/',
+    category: ['react'],
+    description:
+      'WIP.Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react',
+  },
+  {
+    image: '/assets/projectImages/perfectsquare1.png',
+    title: 'Perfect Square v1',
+    link: 'https://perfectsquareke.netlify.app/',
+    category: ['react'],
+    description:
+      'Fully functional first iteration of the perfectsquare website, done as a prototype and used in prod',
+  },
+  {
+    image: '/assets/projectImages/bootstrapportfolio.png',
+    title: 'Bootstrap Portfolio',
+    link: 'https://bootstrap-portfolio-githuba.netlify.app/',
+    category: ['bootstrap', 'react', 'sass'],
+    description:
+      'A mini project of a portflio website done in bootstrap as a the css framework and scss as the css preprocessor',
   },
   {
     image: '/assets/self-driving.png',
@@ -56,7 +81,6 @@ const projectsData = [
     description:
       'A game whreby you roll until all dice are the same. Click each die to freeze it at its current value between rolls.',
   },
-
   {
     image: '/assets/adam-gethin-ujmv-UBQ0uE-unsplash.png',
     title: ' Blockchain Covid Certificates ',
@@ -80,14 +104,6 @@ const projectsData = [
     category: ['javascript'],
     description:
       'It is an implementation of my own minimal version of the blockchain (without decentralization and consensus, only basic mechanics).',
-  },
-  {
-    image: '/assets/6775355aae42326ce21aee81340220ed.png',
-    title: 'Web 3 buy Me a Coffee',
-    link: 'https://github.com/githubarj/Web-3-Buy-ME-A-Coffee ',
-    category: ['solidity'],
-    description:
-      'This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.',
   },
   {
     image: '/assets/carl-raw-m3hn2Kn5Bns-unsplash.png',

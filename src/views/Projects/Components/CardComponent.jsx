@@ -3,7 +3,7 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { filterIcons } from './filterIcons';
 import { v4 as uuidv4 } from 'uuid';
 
-const { Text } = Typography;
+const { Text, Link } = Typography;
 
 const CardComponent = (props) => {
   const [loading, setLoading] = useState(true);
@@ -76,7 +76,10 @@ const CardComponent = (props) => {
             }
           >
             <Text> {description} </Text>
-            <Button type='link'> link &gt; </Button>
+
+            <Link href={link} target='_blank' className='link' type='link'>
+              link &gt;
+            </Link>
           </Card>
           {/* </Suspense> */}
         </>
