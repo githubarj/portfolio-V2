@@ -47,7 +47,12 @@ const AppLayout = () => {
           Layout: {
             headerBg: isMobile && path === 'hello' ? 'none' : '#001626',
             siderBg: isMobile && path === 'hello' ? 'none' : '#001626',
-            bodyBg: isMobile && path === 'hello' ? 'none' : '#001626',
+            bodyBg:
+              isMobile && path === 'hello'
+                ? 'none'
+                : path === 'about'
+                ? '#011221'
+                : '#001626',
             footerBg: isMobile && path === 'hello' ? 'none' : '#001626',
           },
           Menu: {
