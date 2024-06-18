@@ -32,7 +32,8 @@
                 align-items: flex-start;
                 padding: 12px 12px 8px 12px;
 
-                button {
+                .link {
+                    padding: 4px 15px;
                     margin-top: auto;
                     color: #2c8ac7;
                     &:hover {
