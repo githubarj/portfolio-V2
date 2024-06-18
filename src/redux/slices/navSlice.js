@@ -27,7 +27,7 @@ const mobileSlice = createSlice({
 const openKeysSlice = createSlice({
   name: 'openKeys',
   initialState: {
-    value: ['personal-info', 'bio', 'projects', 'contacts', 'find-me-also-on'],
+    value: [],
   },
   reducers: {
     setOpenKeys: (state, action) => {
