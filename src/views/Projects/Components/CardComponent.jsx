@@ -10,7 +10,7 @@ const CardComponent = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 200);
+    }, 300);
   });
 
   const { description, category, title, link, image } = props;
@@ -42,7 +42,7 @@ const CardComponent = (props) => {
             justify='space-between'
             align='center'
             style={{
-              display: !loading ? 'flex' : 'none',
+              visibility: !loading ? 'visible' : 'hidden',
             }}
           >
             <Text> {title} </Text>
@@ -58,7 +58,7 @@ const CardComponent = (props) => {
           </Flex>
           <Card
             style={{
-              display: !loading ? 'flex' : 'none',
+              visibility: !loading ? 'visible' : 'hidden',
             }}
             bordered={false}
             size='small'
