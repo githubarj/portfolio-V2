@@ -1,11 +1,12 @@
 import { Button, Form, Input, message } from 'antd';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const { TextArea } = Input;
 
 const ContactForm = ({ form, switchThankYou }) => {
   // TODO fix the email js functionality and implement the thank you for message page and move the sucess func
-
+  const [loading, setLoading] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
   const success = () => {
     messageApi.open({
@@ -15,20 +16,34 @@ const ContactForm = ({ form, switchThankYou }) => {
   };
 
   const sendEmail = (values) => {
-    // e.preventDefault();
-    console.log(values);
-    success();
-    emailjs
-      .sendForm('service_y9j6qq2', 'template_3enmvkg', values, {
-        publicKey: 'yeT6mDoMNVA7sdQmZ',
-      })
+    setLoading(true);
+    const templateParams = {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+    };
 
+    emailjs
+      .send(
+        'service_y9j6qq2',
+        'template_w9xijeq',
+        templateParams,
+        'yeT6mDoMNVA7sdQmZ'
+      )
       .then(
         () => {
           console.log('SUCCESS!');
+          success();
+          if (switchThankYou) switchThankYou();
+          setLoading(false);
         },
         (error) => {
+          setLoading(false);
           console.log('FAILED...', error.text);
+          messageApi.open({
+            type: 'error',
+            content: 'Failed to send message: ' + error.text,
+          });
         }
       );
   };
@@ -37,6 +52,7 @@ const ContactForm = ({ form, switchThankYou }) => {
     <>
       {contextHolder}
       <Form
+        clearOnDestroy
         onFinish={sendEmail}
         scrollToFirstError
         size='large'
@@ -88,7 +104,7 @@ const ContactForm = ({ form, switchThankYou }) => {
           <TextArea allowClear rows={4} />
         </Form.Item>
         <Form.Item>
-          <Button type='primary' htmlType='submit'>
+          <Button type='primary' htmlType='submit' loading={loading}>
             submit-message
           </Button>
         </Form.Item>
