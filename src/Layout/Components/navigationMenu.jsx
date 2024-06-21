@@ -2,7 +2,10 @@ import { ConfigProvider, Menu } from 'antd';
 import { aboutItems, projectsItems, contactItems } from './navigation';
 import useRouting from '../../hooks/useRouting';
 import { useDispatch, useSelector } from 'react-redux';
-import { setOpenKeys } from '../../redux/slices/navSlice';
+import {
+  initializeSelectedKeys,
+  setOpenKeys,
+} from '../../redux/slices/navSlice';
 
 const NavigationMenu = () => {
   const stateOpenKeys = useSelector((state) => state.layout.openKeys.value);
@@ -60,6 +63,11 @@ const NavigationMenu = () => {
     }
   };
 
+  const handleSelect = ({ selectedKeys }) => {
+    dispatch(initializeSelectedKeys(selectedKeys));
+    console.log(selectedKeys);
+  };
+
   return (
     <ConfigProvider
       theme={{
@@ -86,6 +94,8 @@ const NavigationMenu = () => {
         onOpenChange={onOpenChange}
         items={items}
         defaultSelectedKeys={selectedKeys}
+        onDeselect={handleSelect}
+        onSelect={handleSelect}
       />
     </ConfigProvider>
   );
