@@ -42,7 +42,7 @@ const openKeysSlice = createSlice({
 const selectedKeysSlice = createSlice({
   name: 'selectedKeys',
   initialState: {
-    value: ['personal-info', 'bio', 'overview', 'React', 'Solidity'],
+    value: ['personal-info', 'bio', 'overview'],
   },
   reducers: {
     initializeSelectedKeys: (state, action) => {
