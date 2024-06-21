@@ -32,11 +32,7 @@ export const routes = [
       },
       {
         path: 'hello',
-        element: React.createElement(
-          Suspense,
-          { fallback },
-          React.createElement(Home)
-        ),
+        element: React.createElement(Home),
       },
       {
         path: 'about',
