@@ -23,18 +23,13 @@ export const filterIcons = [
     icon: SiJavascript,
     color: '#c6b313',
   },
-  {
-    key: 'rust',
-    label: 'Rust',
-    icon: FaRust,
-    color: 'brown',
-  },
-  {
-    key: 'typescript',
-    label: 'TypeScript',
-    icon: SiTypescript,
-    color: '#3178C6',
-  },
+
+  // {
+  //   key: 'typescript',
+  //   label: 'TypeScript',
+  //   icon: SiTypescript,
+  //   color: '#3178C6',
+  // },
   {
     key: 'ant-design',
     label: 'Ant-Design',
@@ -61,12 +56,12 @@ export const filterIcons = [
     icon: SiSolidity,
     color: '#565656',
   },
-  {
-    key: 'bash',
-    label: 'Bash',
-    icon: SiGnubash,
-    color: '#4EAA25',
-  },
+  // {
+  //   key: 'bash',
+  //   label: 'Bash',
+  //   icon: SiGnubash,
+  //   color: '#4EAA25',
+  // },
   {
     key: 'firebase',
     label: 'Firebase',

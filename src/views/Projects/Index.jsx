@@ -27,7 +27,7 @@ const Projects = () => {
   }
 
   const filteredObjects =
-    selectedKeys.slice(3).length === 0
+    filterProjectsByCategories(projectsData, selectedKeys).length === 0
       ? projectsData
       : filterProjectsByCategories(projectsData, selectedKeys);
 
