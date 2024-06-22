@@ -21,7 +21,7 @@ const projectsData = [
     link: 'https://disneypluscloneke.netlify.app',
     category: ['react', 'firebase'],
     description:
-      'Created a clone of disney plus with firebase authentication and data storage, styled using styled components in react. Login with a goggle account',
+      'Created a clone of disney plus with firebase authentication and data storage, styled using styled components in react.',
   },
   {
     image: '/assets/projectImages/markdownnotes.png',
