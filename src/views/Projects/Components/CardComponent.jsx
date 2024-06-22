@@ -10,8 +10,8 @@ const CardComponent = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 300);
-  });
+    }, 200);
+  }, []);
 
   const { description, category, title, link, image } = props;
   const layout = {

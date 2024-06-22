@@ -5,7 +5,7 @@ const projectsData = [
     link: 'https://githuba.netlify.app/hello',
     category: ['react', 'sass', 'ant-design'],
     description:
-      'This is the updated version of my portfolio, created following Ant Design principles and components. React with Vite, MDX, and sass also used',
+      'This is the updated version of my portfolio, created using Ant Design principles and components. React with Vite, MDX, and sass also used',
   },
   {
     image: '/assets/projectImages/perfectsquare2.png',
