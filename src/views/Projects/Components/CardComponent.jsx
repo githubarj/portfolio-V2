@@ -76,7 +76,7 @@ const CardComponent = (props) => {
               />
             }
           >
-            <Text style={{ color: 'silver', fontWeight: '100' }}>
+            <Text style={{ color: 'silver' }}>
               {' '}
               {description}{' '}
             </Text>
