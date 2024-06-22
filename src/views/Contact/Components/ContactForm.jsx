@@ -57,10 +57,12 @@ const ContactForm = ({ form, switchThankYou }) => {
         scrollToFirstError
         size='large'
         form={form}
+        
         variant='filled'
         requiredMark='hidden'
         layout='vertical'
         autoComplete='off'
+        className='contact-form'
       >
         <Form.Item
           name='name'
