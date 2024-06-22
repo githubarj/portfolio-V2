@@ -5,6 +5,11 @@
     width: 100% !important;
     &__form-col {
         width: 80%;
+        .contact-form {
+            // .ant-input-filled {
+            //     @include border-line($right: 1px, $left: 1px, $top: 1px, $bottom: 1px);
+            // }
+        }
         .thank-you {
             justify-content: center;
             height: 100%;

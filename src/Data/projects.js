@@ -21,7 +21,7 @@ const projectsData = [
     link: 'https://disneypluscloneke.netlify.app',
     category: ['react', 'firebase'],
     description:
-      'Created a clone of the disney plus home page with firebase authentication and data storage, styled using styled components in react',
+      'Created a clone of disney plus with firebase authentication and data storage, styled using styled components in react. Login with a goggle account',
   },
   {
     image: '/assets/projectImages/markdownnotes.png',
@@ -30,6 +30,14 @@ const projectsData = [
     category: ['react', 'firebase'],
     description:
       'An applications that allows a user to write and preview markdown and save to firebase',
+  },
+
+  {
+    image: '/assets/projectImages/changia.png',
+    title: 'Changia',
+    link: 'https://changiake.netlify.app/',
+    category: ['react', 'sass', 'material-ui'],
+    description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
   },
 
   {
@@ -47,14 +55,6 @@ const projectsData = [
     category: ['react'],
     description:
       'This is a project done in react with heavy use of react router dom v6 to practice on their data API routes with loaders and auth',
-  },
-
-  {
-    image: '/assets/projectImages/changia.png',
-    title: 'Changia',
-    link: 'https://changiake.netlify.app/',
-    category: ['react', 'sass', 'material-ui'],
-    description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
   },
   {
     image: '/assets/projectImages/perfectsquare1.png',
