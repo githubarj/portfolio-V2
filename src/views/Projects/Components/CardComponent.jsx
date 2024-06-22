@@ -57,6 +57,7 @@ const CardComponent = (props) => {
             </div>
           </Flex>
           <Card
+          
             style={{
               visibility: !loading ? 'visible' : 'hidden',
             }}
@@ -75,7 +76,10 @@ const CardComponent = (props) => {
               />
             }
           >
-            <Text> {description} </Text>
+            <Text style={{ color: 'silver', fontWeight: '100' }}>
+              {' '}
+              {description}{' '}
+            </Text>
 
             <Link href={link} target='_blank' className='link' type='link'>
               link &gt;
