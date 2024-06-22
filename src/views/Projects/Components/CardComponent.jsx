@@ -45,7 +45,7 @@ const CardComponent = (props) => {
               visibility: !loading ? 'visible' : 'hidden',
             }}
           >
-            <Text> {title} </Text>
+            <Text > {title} </Text>
             <div className='icons'>
               {categories.map((item) => (
                 <Tag
@@ -57,7 +57,6 @@ const CardComponent = (props) => {
             </div>
           </Flex>
           <Card
-          
             style={{
               visibility: !loading ? 'visible' : 'hidden',
             }}
@@ -76,10 +75,7 @@ const CardComponent = (props) => {
               />
             }
           >
-            <Text style={{ color: 'silver' }}>
-              {' '}
-              {description}{' '}
-            </Text>
+            <Text style={{ color: 'silver' }}>{description}</Text>
 
             <Link href={link} target='_blank' className='link' type='link'>
               link &gt;

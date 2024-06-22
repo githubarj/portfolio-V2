@@ -63,6 +63,22 @@ const NavigationMenu = () => {
     }
   };
 
+  const goToLink = ({ key }) => {
+    switch (key) {
+      case 'github':
+        window.open('https://github.com/githubarj', '_blank');
+        break;
+      case 'wakatime':
+        window.open('https://www.codewars.com/users/githubarj', '_blank');
+        break;
+      case 'codewars':
+        window.open('https://wakatime.com/@githubarj', '_blank');
+        break;
+      default:
+        return;
+    }
+  };
+
   const handleSelect = ({ selectedKeys }) => {
     dispatch(initializeSelectedKeys(selectedKeys));
     console.log(selectedKeys);
@@ -96,6 +112,7 @@ const NavigationMenu = () => {
         defaultSelectedKeys={selectedKeys}
         onDeselect={handleSelect}
         onSelect={handleSelect}
+        onClick={goToLink}
       />
     </ConfigProvider>
   );
