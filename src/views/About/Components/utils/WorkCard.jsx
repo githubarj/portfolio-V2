@@ -2,7 +2,7 @@ import { Col, ConfigProvider, Flex, Typography } from 'antd';
 
 const { Text, Title } = Typography;
 
-function WorkCard({ title, date, icon, location, companyName, colour }) {
+function WorkCard({ title, date, logo, location, companyName, colour }) {
   const boxShadowStyle = {
     WebkitBoxShadow: `15px 15px 0px 0px ${colour}`, // for Safari and older versions of Chrome
     MozBoxShadow: `15px 15px 0px 0px ${colour}`, // for Firefox
@@ -15,21 +15,24 @@ function WorkCard({ title, date, icon, location, companyName, colour }) {
         components: {
           Typography: {
             colorText: '#011221',
+            colorTextHeading: '#010C15',
           },
         },
       }}
     >
       <Col className='work-card' style={boxShadowStyle}>
-        <Flex>
-          <Title level={5}> {title}</Title>
-          <Text> {date} </Text>
+        <Flex justify='space-between' align='center'>
+          <Text strong> {title}</Text>
+          <Text style={{ fontSize: '12px' }}> {date} </Text>
         </Flex>
-        <Flex>
-          <Title level={5}>
-            <img src={icon} alt='company icon' />
-            {companyName}
-          </Title>
-          <Text> {location} </Text>
+        <Flex gap='middle' align='center'>
+          <Flex gap='small' align='center'>
+            <img src={logo} alt='company icon' style={{ width: '24px' }} />
+            <Title style={{ margin: '0px' }} level={5}>
+              {companyName}
+            </Title>
+          </Flex>
+          <Text style={{ fontSize: '12px' }}> {location} </Text>
         </Flex>
         <Flex></Flex>
       </Col>

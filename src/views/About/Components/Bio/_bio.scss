@@ -1,9 +1,26 @@
-.about-container{
-    .overview-container{
-        .overview-content{
-            .work-card{
-                background: #FFFFFF;
-                
+@use "../../../../sass/mixins";
+
+.about-container {
+    width: 100%;
+    padding: 5px 15px;
+    .overview-container {
+        width: 100%;
+        .overview-title{
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+        .overview-content {
+            @include flex-column-center;
+            .work-card {
+                background: #ffffff;
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 10px;
+                border: 2px solid $primary-dark-blue;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
             }
         }
     }
