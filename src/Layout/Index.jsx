@@ -34,7 +34,7 @@ const AppLayout = () => {
   }, [dispatch]);
 
   // TODO add a colors objects to store all the colors for easier themeing or color switching
-  // TODO find out if you can implement lazy loading for background images
+  
   return (
     <ConfigProvider
       theme={{

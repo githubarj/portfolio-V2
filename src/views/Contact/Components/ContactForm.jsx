@@ -3,11 +3,10 @@ import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
 const { TextArea } = Input;
-
 const ContactForm = ({ form, switchThankYou }) => {
-  // TODO fix the email js functionality and implement the thank you for message page and move the sucess func
   const [loading, setLoading] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
+  
   const success = () => {
     messageApi.open({
       type: 'success',
@@ -57,7 +56,6 @@ const ContactForm = ({ form, switchThankYou }) => {
         scrollToFirstError
         size='large'
         form={form}
-        
         variant='filled'
         requiredMark='hidden'
         layout='vertical'
