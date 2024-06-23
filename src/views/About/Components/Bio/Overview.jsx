@@ -13,8 +13,8 @@ const Overview = () => {
       theme={{
         components: {
           Typography: {
-            colorText: '#F8F9CC',
-            colorTextHeading: '#F8F9CC',
+            colorText: '#FFF',
+            colorTextHeading: '#FFF',
           },
         },
       }}
