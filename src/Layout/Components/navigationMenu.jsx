@@ -97,9 +97,7 @@ const NavigationMenu = () => {
       }}
     >
       {/* TODO set selectedKeys manually for the projects path so that one can get a link with selected results
-      
-      also look into how to make a function to control the selected keys so that they can be set by any actor
-
+      also look into how to make a efunction to control the selected keys so that they can be set by any actor
       */}
 
       <Menu

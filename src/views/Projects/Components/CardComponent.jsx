@@ -3,6 +3,8 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { filterIcons } from './filterIcons';
 import { v4 as uuidv4 } from 'uuid';
 
+// TODO optimize loading of images
+
 const { Text, Link } = Typography;
 
 const CardComponent = (props) => {
@@ -29,7 +31,6 @@ const CardComponent = (props) => {
         <Skeleton active />
       ) : (
         <>
-          {/* TODO make this a fallback of a suspense or add a loader with a setTimeout */}
           <Skeleton
             active
             style={{
@@ -37,7 +38,7 @@ const CardComponent = (props) => {
               position: 'absolute',
             }}
           />
-          {/* <Suspense fallback={<Skeleton />}> find out how to use suspense and hot it works */}
+
           <Flex
             justify='space-between'
             align='center'
@@ -45,7 +46,7 @@ const CardComponent = (props) => {
               visibility: !loading ? 'visible' : 'hidden',
             }}
           >
-            <Text > {title} </Text>
+            <Text> {title} </Text>
             <div className='icons'>
               {categories.map((item) => (
                 <Tag
