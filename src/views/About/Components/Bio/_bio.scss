@@ -5,7 +5,7 @@
     padding: 5px 15px;
     .overview-container {
         width: 100%;
-        .overview-title{
+        .overview-title {
             width: fit-content;
             margin-bottom: 20px;
         }
@@ -15,11 +15,18 @@
                 background: #ffffff;
                 width: 100%;
                 margin-bottom: 30px;
-                padding: 10px;
+                padding: 20px 10px;
                 border: 2px solid $primary-dark-blue;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+            }
+            .alt-card {
+                background: #ffe9a8;
+                padding: 20px 10px 10px 10px;
+                border: 2px solid $primary-dark-blue;
+                width: 100%;
+                margin-bottom: 15px;
 
             }
         }

@@ -2,8 +2,9 @@ import { Col, ConfigProvider, Flex, Row, Typography } from 'antd';
 import { MdPhone, MdOutlineEmail } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
 import WorkCard from '../utils/WorkCard';
-import { experience } from '../../Data/bio';
+import { education, experience, skills } from '../../Data/bio';
 import { v4 as uuidv4 } from 'uuid';
+import AltCard from '../utils/AltCard';
 const { Text, Title } = Typography;
 
 const Overview = () => {
@@ -52,7 +53,7 @@ const Overview = () => {
             </Text>
           </Flex>
         </Col>
-        <Row gutter={16}>
+        <Row gutter={50}>
           <Col className='overview-content' lg={24} xl={14}>
             <Title level={5} style={{ fontWeight: 500 }}>
               Work Experience
@@ -61,11 +62,22 @@ const Overview = () => {
               <WorkCard key={uuidv4()} {...item} />
             ))}
           </Col>
+
           <Col className='overview-content' lg={24} xl={10}>
             <Title level={5} style={{ fontWeight: 500 }}>
               Education
             </Title>
+            {education.map((item) => (
+              <AltCard key={uuidv4()} {...item} />
+            ))}
+            <Title level={5} style={{ fontWeight: 500 }}>
+              Skills
+            </Title>
+            {skills.map((item) => (
+              <AltCard key={uuidv4()} {...item} />
+            ))}
           </Col>
+          
         </Row>
       </Flex>
     </ConfigProvider>
