@@ -1,0 +1,37 @@
+@use "../../../sass/mixins";
+.navigation-menu {
+
+    width: 100%;
+    border: none !important;
+    > li {
+        @include border-line($bottom: 1px);
+
+        > ul {
+            > li:nth-child(1) {
+                > div > svg {
+                    color: $accent-peach !important;
+                }
+            }
+            > li:nth-child(2) {
+                > div > svg {
+                    color: $accent-teal !important;
+                }
+            }
+            > li:nth-child(3) {
+                > div > svg {
+                    color: $secondary-blue !important;
+                }
+            }
+        }
+    }
+    .menu-options {
+        @include flex-row-center;
+        gap: 5px;
+    }
+
+    .filter-options {
+        @include flex-row-center;
+        gap: 15px;
+      
+    }
+}

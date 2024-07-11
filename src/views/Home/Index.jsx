@@ -1,10 +1,16 @@
-
+import { Col, Row } from 'antd';
+import Intro from './Components/Intro';
 const Home = () => {
   return (
-    <div>
-      Hi
-    </div>
-  )
-}
+    <Row
+      className='home-container'
+     
+    >
+      <Col className='intro-section'>
+        <Intro />
+      </Col>
+    </Row>
+  );
+};
 
-export default Home
+export default Home;

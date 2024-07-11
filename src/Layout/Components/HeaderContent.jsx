@@ -1,23 +1,24 @@
 import { Col, ConfigProvider, Dropdown, Menu, Row, Typography } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { navTo } from '../../redux/slices/navSlice';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import { useLocation, useNavigate } from 'react-router-dom';
+import useRouting from '../../hooks/useRouting';
 
 const { Text } = Typography;
 
-function HeaderContent({ isMobile }) {
-  const current = useSelector((state) => state.layout.currentPage.value);
-  const dispatch = useDispatch();
+const items = [
+  { label: '_hello', key: 'hello' },
+  { label: '_about-me', key: 'about' },
+  { label: '_projects', key: 'projects' },
+  { label: '_contact-me', key: 'contact-me' },
+];
 
-  const items = [
-    { label: '_hello', key: 'hello' },
-    { label: '_about-me', key: 'about' },
-    { label: '_projects', key: 'projects' },
-    { label: '_contact-me', key: 'contact' },
-  ];
+function HeaderContent({ isMobile }) {
+  const { navigateTo, pathArray } = useRouting();
+
+  const path = pathArray[0] || '';
 
   const handleClick = (e) => {
-    dispatch(navTo(e.key));
+    navigateTo(e.key);
   };
 
   return (
@@ -38,7 +39,7 @@ function HeaderContent({ isMobile }) {
           xs={20}
           className={`header-content__name ${isMobile && 'no-border'}`}
         >
-          <Text>githuba-jeremy</Text>
+          <Text>githuba-jeremy </Text>
         </Col>
         <Col
           sm={19}
@@ -48,7 +49,12 @@ function HeaderContent({ isMobile }) {
           {isMobile ? (
             <Dropdown
               trigger={['click']}
-              menu={{ items, selectable: true, defaultSelectedKeys: ['hello'] }}
+              menu={{
+                items,
+                selectable: true,
+                defaultSelectedKeys: ['hello'],
+                onClick: handleClick,
+              }}
               placement='bottomRight'
               arrow={{ pointAtCenter: true }}
             >
@@ -58,7 +64,7 @@ function HeaderContent({ isMobile }) {
             <Menu
               className='menu-container'
               onClick={handleClick}
-              selectedKeys={[current]}
+              selectedKeys={[path]}
               mode='horizontal'
               items={items}
             />

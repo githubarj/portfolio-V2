@@ -1,21 +1,26 @@
 import { Col, Flex, Tooltip, Typography } from 'antd';
 import { GrLinkedinOption } from 'react-icons/gr';
-import { FaTwitter } from 'react-icons/fa';
+import { FaTwitter, FaGithub } from 'react-icons/fa';
 import { PiGithubLogoFill } from 'react-icons/pi';
 import React from 'react';
 const { Text } = Typography;
 
-const FooterContent = () => {
+const FooterContent = ({ isMobile }) => {
   const socials = [
+    {
+      title: 'GitHub',
+      icon: FaGithub,
+      link: 'https://github.com/githubarj',
+    },
     {
       title: 'linked in',
       icon: GrLinkedinOption,
-      link: 'www.linkedin.com/in/richard-jeremy-githuba-80548922a',
+      link: 'https://www.linkedin.com/in/richard-jeremy-githuba-80548922a/',
     },
     {
       title: 'Twitter',
       icon: FaTwitter,
-      link: '',
+      link: 'https://twitter.com/githubarj',
     },
     {
       title: 'GitHub',
@@ -23,13 +28,15 @@ const FooterContent = () => {
       link: 'https://github.com/githubarj',
       username: '@githubarj',
     },
-  ]; 
+  ];
 
   return (
     <Flex align='center' className='footer'>
-      <Col className='footer__items'>
-        <Text>Find me on: </Text>
-      </Col>
+      {!isMobile ? (
+        <Col className='footer__items'>
+          <Text>Find me on: </Text>
+        </Col>
+      ) : null}
       {socials.map((item, index) => (
         <a
           href={item.link}
