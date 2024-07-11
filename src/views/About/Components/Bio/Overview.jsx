@@ -1,6 +1,5 @@
 import { Col, ConfigProvider, Flex, Row, Typography } from 'antd';
 import { MdPhone, MdOutlineEmail } from 'react-icons/md';
-import { GoMail } from 'react-icons/go';
 import WorkCard from '../utils/WorkCard';
 import { education, experience, skills } from '../../Data/bio';
 import { v4 as uuidv4 } from 'uuid';
