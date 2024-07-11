@@ -10,8 +10,7 @@ export default function AltCard({ date, title, items, facility }) {
             colorTextHeading: '#010C15',
           },
           List: {
-            colorText: '#011221',
-            itemPaddingSM : '5px 0px'
+            itemPaddingSM: '5px 0px',
           },
         },
       }}
@@ -29,7 +28,7 @@ export default function AltCard({ date, title, items, facility }) {
             dataSource={items}
             renderItem={(item) => (
               <List.Item >
-                <Text style={{ fontSize: '12px' }}></Text> {item}
+                <Text style={{ fontSize: '12px' }}>{item}</Text>
               </List.Item>
             )}
           />

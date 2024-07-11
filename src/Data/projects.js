@@ -1,19 +1,18 @@
 const projectsData = [
   {
-    image: '/assets/projectImages/portfolio2.png',
-    title: 'Portfolio V2',
-    link: 'https://githuba.netlify.app/hello',
-    category: ['react', 'sass', 'ant-design'],
-    description:
-      'This is the updated version of my portfolio, created using Ant Design principles and components. React with Vite, MDX, and sass also used',
-  },
-  {
     image: '/assets/projectImages/perfectsquare2.png',
     title: 'Perfect square V2',
     link: 'https://perfectsquare.cc/',
     category: ['react', 'firebase'],
     description:
       'Responsive company website using React, Vite, and Firebase for fast performance and real-time updates.',
+  },
+  {
+    image: '/assets/projectImages/changia.png',
+    title: 'Changia',
+    link: 'https://changiake.netlify.app/',
+    category: ['react', 'sass', 'ant-design', 'tailwind'],
+    description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
   },
   {
     image: '/assets/projectImages/disneyplus.png',
@@ -31,15 +30,14 @@ const projectsData = [
     description:
       'An applications that allows a user to write and preview markdown and save to firebase',
   },
-
   {
-    image: '/assets/projectImages/changia.png',
-    title: 'Changia',
-    link: 'https://changiake.netlify.app/',
-    category: ['react', 'sass', 'material-ui'],
-    description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
+    image: '/assets/projectImages/portfolio2.png',
+    title: 'Portfolio V2',
+    link: 'https://githuba.netlify.app/hello',
+    category: ['react', 'sass', 'ant-design'],
+    description:
+      'This is the updated version of my portfolio, created using Ant Design principles and components. React with Vite, MDX, and sass also used',
   },
-
   {
     image: '/assets/projectImages/portfolio1.png',
     title: 'Portfolio V1',
