@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 const useFetchWakatime = ( url ) => {
   const [data, setData] = useState(null);
@@ -13,7 +13,7 @@ const useFetchWakatime = ( url ) => {
       .catch((error) => console.error('Error fetching data:', error));
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (url) {
       getWakatime(url);
     }

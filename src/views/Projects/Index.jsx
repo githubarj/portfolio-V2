@@ -6,7 +6,6 @@ import CardComponent from './Components/CardComponent';
 import { projectsData } from '../../Data/projects';
 import { v4 as uuidv4 } from 'uuid';
 import { FaArrowUp } from 'react-icons/fa6';
-import { motion } from 'framer-motion';
 
 const Projects = () => {
   const dispatch = useDispatch();
@@ -29,23 +28,16 @@ const Projects = () => {
 
   return (
     <>
-      <motion.div
-        key='card-component'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <FloatButton.BackTop
-          style={{ bottom: '55px', right: '5px' }}
-          icon={<FaArrowUp />}
-        />
+      <FloatButton.BackTop
+        style={{ bottom: '55px', right: '5px' }}
+        icon={<FaArrowUp />}
+      />
 
-        <Row className='projects-container' gutter={[30, 30]}>
-          {filteredObjects.map((item) => (
-            <CardComponent key={uuidv4()} {...item} />
-          ))}
-        </Row>
-      </motion.div>
+      <Row className='projects-container' gutter={[30, 30]}>
+        {filteredObjects.map((item) => (
+          <CardComponent key={uuidv4()} {...item} />
+        ))}
+      </Row>
     </>
   );
 };
