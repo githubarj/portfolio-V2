@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import SoftwareDeveloper from './mdx/SoftwareDeveloper.mdx';
-import TechSupport from './mdx/TechSupport.mdx';
-import VolunteeLibrarian from './mdx/VolunteeLibrarian.mdx';
-import TechAttachee from './mdx/TechAttachee.mdx';
-import StemTeacher from './mdx/StemTeacher.mdx';
+import SoftwareDeveloper from './mdx/SoftwareDeveloper';
+import TechSupport from './mdx/TechSupport';
+import VolunteeLibrarian from './mdx/VolunteeLibrarian';
+import TechAttachee from './mdx/TechAttachee';
+import StemTeacher from './mdx/StemTeacher';
 
 function Experience() {
   const { file } = useParams();

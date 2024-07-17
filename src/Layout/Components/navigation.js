@@ -49,8 +49,8 @@ export const aboutItems = [
             label: optionsLabel('overview', 'bio'),
           },
           {
-            key: 'interests',
-            label: optionsLabel('interests', 'bio'),
+            key: 'coding-stats',
+            label: optionsLabel('coding-stats', 'bio'),
           },
         ],
       },

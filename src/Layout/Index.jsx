@@ -9,7 +9,6 @@ import { Outlet } from 'react-router-dom';
 import useRouting from '../hooks/useRouting';
 import CustomBreadCrumb from './Components/CustomBreadCrumb';
 import BackgroundImage from './assets/background.png';
-import { AnimatePresence } from 'framer-motion';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -69,7 +68,6 @@ const AppLayout = () => {
         },
       }}
     >
-      <AnimatePresence>
         <Layout
           className='app-layout'
           style={{
@@ -106,7 +104,6 @@ const AppLayout = () => {
             <FooterContent isMobile={isMobile} />
           </Footer>
         </Layout>
-      </AnimatePresence>
     </ConfigProvider>
   );
 };
