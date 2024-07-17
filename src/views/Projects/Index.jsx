@@ -1,16 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  addOpenKeys,
-  initializeSelectedKeys,
-  setSelectedKeys,
-} from '../../redux/slices/navSlice';
-import { Col, FloatButton, Row } from 'antd';
+import { addOpenKeys } from '../../redux/slices/navSlice';
+import { FloatButton, Row } from 'antd';
 import CardComponent from './Components/CardComponent';
 import { projectsData } from '../../Data/projects';
 import { v4 as uuidv4 } from 'uuid';
 import { FaArrowUp } from 'react-icons/fa6';
-import { filterIcons } from './Components/filterIcons';
 
 const Projects = () => {
   const dispatch = useDispatch();

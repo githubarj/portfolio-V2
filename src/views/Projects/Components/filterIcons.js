@@ -7,6 +7,7 @@ import {
   SiJavascript,
   SiMui,
   SiSolidity,
+  SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
 
@@ -37,10 +38,10 @@ export const filterIcons = [
     color: '#1890FF',
   },
   {
-    key: 'material-ui',
-    label: 'Material Ui',
-    icon: SiMui,
-    color: '#1976d2',
+    key: 'tailwind',
+    label: 'Tailwind',
+    icon: SiTailwindcss,
+    color: '#06B6D4',
   },
 
   {

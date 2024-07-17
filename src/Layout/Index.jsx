@@ -68,42 +68,42 @@ const AppLayout = () => {
         },
       }}
     >
-      <Layout
-        className='app-layout'
-        style={{
-          backgroundImage: `url(${BackgroundImage})`,
-        }}
-      >
-        <Header className='app-layout__header'>
-          <HeaderContent isMobile={isMobile} />
-        </Header>
         <Layout
-          hasSider={!isMobile && path !== 'hello'}
-          className='app-layout__body'
+          className='app-layout'
+          style={{
+            backgroundImage: `url(${BackgroundImage})`,
+          }}
         >
-          {path !== 'hello' &&
-            (!isMobile ? (
-              <Sider className='body__sider'>
+          <Header className='app-layout__header'>
+            <HeaderContent isMobile={isMobile} />
+          </Header>
+          <Layout
+            hasSider={!isMobile && path !== 'hello'}
+            className='app-layout__body'
+          >
+            {path !== 'hello' &&
+              (!isMobile ? (
+                <Sider className='body__sider'>
+                  <NavigationMenu />
+                </Sider>
+              ) : (
                 <NavigationMenu />
-              </Sider>
-            ) : (
-              <NavigationMenu />
-            ))}
+              ))}
 
-          <Content className='body__content'>
-            {path !== 'hello' ? (
-              <CustomBreadCrumb pathArray={pathArray} />
-            ) : null}
-            <Col className='outlet'>
-              <Outlet />
-            </Col>
-          </Content>
+            <Content className='body__content'>
+              {path !== 'hello' ? (
+                <CustomBreadCrumb pathArray={pathArray} />
+              ) : null}
+              <Col className='outlet'>
+                <Outlet />
+              </Col>
+            </Content>
+          </Layout>
+
+          <Footer className='app-layout__footer'>
+            <FooterContent isMobile={isMobile} />
+          </Footer>
         </Layout>
-
-        <Footer className='app-layout__footer'>
-          <FooterContent isMobile={isMobile} />
-        </Footer>
-      </Layout>
     </ConfigProvider>
   );
 };

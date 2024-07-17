@@ -1,16 +1,16 @@
 import Overview from './Overview';
 
-import Interests from './mdx/Interests.mdx';
 import { useParams } from 'react-router-dom';
 import { Col } from 'antd';
+import CodingStats from './CodeStats';
 const Bio = () => {
   const { file } = useParams();
   return (
     <Col>
       {file === 'overview' ? (
         <Overview />
-      ) : file === 'interests' ? (
-        <Interests />
+      ) : file === 'coding-stats' ? (
+        <CodingStats />
       ) : null}
     </Col>
   );
