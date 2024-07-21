@@ -71,7 +71,7 @@ console.log(chartC)
             <XAxis dataKey="percent" type="number" hide />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent nameKey="name"  />}
+              content={<ChartTooltipContent     className="text-muted-foreground" />}
             />
             <Bar dataKey="percent" layout="vertical" radius={5} >
             
