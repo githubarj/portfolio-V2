@@ -18,45 +18,11 @@ import  {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-]
 
 
+const Editors = () => {
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
-} satisfies ChartConfig
-
-const Languages = () => {
-
-const {data} = useFetchWakatime ("https://wakatime.com/share/@githubarj/805e6505-1fb8-4f23-808b-24e26f6a36c5.json")
+const {data} = useFetchWakatime ("https://wakatime.com/share/@githubarj/e11cf9a9-1416-4824-b46b-374a23dbed39.json")
 
 
   const sliced = data ? data?.slice(0, 5) : []
@@ -78,10 +44,10 @@ console.log(chartC)
   console.log(chartFormat)
 
   return (
-    <Card className="w-full">
+    <Card className="w-full bg-slate-800 text-white border-none">
       <CardHeader>
-        <CardTitle>Languages Used</CardTitle>
-        <CardDescription>Top 5 in the last week</CardDescription>
+        <CardTitle>Code Editors Used</CardTitle>
+        <CardDescription>Top in the last week</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartC} className="min-h-[200]">
@@ -94,7 +60,7 @@ console.log(chartC)
             }}
           >
             <YAxis
-            hide
+        
               dataKey="name"
               type="category"
               tickLine={false}
@@ -105,16 +71,10 @@ console.log(chartC)
             <XAxis dataKey="percent" type="number" hide />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent  />}
+              content={<ChartTooltipContent nameKey="name"  />}
             />
             <Bar dataKey="percent" layout="vertical" radius={5} >
-                <LabelList
-                dataKey="name"
-                position="insideLeft"
-                offset={8}
-                className="fill-[#ffff]"
-                fontSize={12}
-              />
+            
             </Bar>
           </BarChart>
         </ChartContainer>
@@ -123,4 +83,4 @@ console.log(chartC)
   )
 }
 
-export default Languages
+export default Editors
