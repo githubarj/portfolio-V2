@@ -56,7 +56,7 @@ console.log(chartC)
             data={chartFormat}
             layout="vertical"
             margin={{
-              left: 0,
+              left: 10,
             }}
           >
             <YAxis
@@ -64,7 +64,7 @@ console.log(chartC)
               dataKey="name"
               type="category"
               tickLine={false}
-              tickMargin={0}
+              tickMargin={10}
               axisLine={false}
       
             />
