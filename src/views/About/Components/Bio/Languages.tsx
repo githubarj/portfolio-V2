@@ -74,7 +74,7 @@ const {data} = useFetchWakatime ("https://wakatime.com/share/@githubarj/805e6505
 
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col bg-slate-800 text-white border-none">
       <CardHeader className="items-center pb-0">
         <CardTitle>Languages Used</CardTitle>
         <CardDescription>Top 5 over the last week</CardDescription>
