@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 
 const useFetchWakatime = ( url ) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   const getWakatime = (url) => {
     fetch(url)
