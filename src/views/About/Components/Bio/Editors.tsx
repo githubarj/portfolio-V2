@@ -49,9 +49,9 @@ const Editors = () => {
 
   return (
     <Card className='w-full bg-slate-800 text-white border-none'>
-      <CardHeader>
+      <CardHeader className='items-center '>
         <CardTitle>Code Editors Used</CardTitle>
-        <CardDescription>Top in the last week</CardDescription>
+        <CardDescription>Top in the last 7 days</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartC} className='min-h-[200]'>

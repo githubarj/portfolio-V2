@@ -25,7 +25,7 @@ const Languages = () => {
     'https://wakatime.com/share/@githubarj/805e6505-1fb8-4f23-808b-24e26f6a36c5.json'
   );
 
-  const sliced: DataItem[] = data ? data?.slice(0, 5) : [];
+  const sliced: DataItem[] = data ? data?.slice(0, 6) : [];
   const chartFormat = sliced.map((item: DataItem) => ({
     ...item,
     fill: item.color,
@@ -43,19 +43,19 @@ const Languages = () => {
     <Card className='flex flex-col bg-slate-800 text-white border-none'>
       <CardHeader className='items-center pb-0'>
         <CardTitle>Languages Used</CardTitle>
-        <CardDescription>Top 5 over the last week</CardDescription>
+        <CardDescription>Top in the last 7 days</CardDescription>
       </CardHeader>
       <CardContent className='flex-1 pb-0'>
         <ChartContainer
           config={chartC}
           className='mx-auto aspect-square max-h-[280px]'
         >
-          <PieChart>
+          <PieChart >
             <ChartTooltip content={<ChartTooltipContent nameKey='percent' />} />
             <Pie data={chartFormat} dataKey='percent' />
             <ChartLegend
               content={<ChartLegendContent nameKey='name' />}
-              className='-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center'
+              className='-translate-y-2 flex-wrap gap-3 [&>*]:basis-1/8 [&>*]:justify-center'
             />
           </PieChart>
         </ChartContainer>
