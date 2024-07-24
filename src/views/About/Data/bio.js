@@ -94,7 +94,7 @@ export const skills = [
   },
   {
     title: 'Learning',
-    items: ['Rust', 'Java', 'Spring Boot'],
+    items: ['Rust'],
   },
   {
     title: 'Technologies',
