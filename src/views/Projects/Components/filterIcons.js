@@ -25,12 +25,12 @@ export const filterIcons = [
     color: '#c6b313',
   },
 
-  // {
-  //   key: 'typescript',
-  //   label: 'TypeScript',
-  //   icon: SiTypescript,
-  //   color: '#3178C6',
-  // },
+  {
+    key: 'typescript',
+    label: 'TypeScript',
+    icon: SiTypescript,
+    color: '#3178C6',
+  },
   {
     key: 'ant-design',
     label: 'Ant-Design',

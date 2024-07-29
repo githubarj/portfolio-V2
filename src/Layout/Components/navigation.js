@@ -105,7 +105,7 @@ export const aboutItems = [
       {
         key: 'email',
         icon: React.createElement(FaEnvelope),
-        label: 'githuba9520@gmail.com',
+        label: 'githubarj@gmail.com',
       },
       {
         key: 'phone',
@@ -137,7 +137,7 @@ export const contactItems = [
       {
         key: 'email',
         icon: React.createElement(FaEnvelope),
-        label: 'githuba9520@gmail.com',
+        label: 'githubarj@gmail.com',
       },
       {
         key: 'phone',

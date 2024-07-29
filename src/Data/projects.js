@@ -11,7 +11,7 @@ const projectsData = [
     image: '/assets/projectImages/changia.png',
     title: 'Changia',
     link: 'https://changiake.netlify.app/',
-    category: ['react', 'sass', 'ant-design', 'tailwind'],
+    category: ['react', 'sass', 'ant-design', 'tailwind', 'typescript'],
     description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
   },
   {
@@ -34,7 +34,7 @@ const projectsData = [
     image: '/assets/projectImages/portfolio2.png',
     title: 'Portfolio V2',
     link: 'https://githuba.netlify.app/hello',
-    category: ['react', 'sass', 'ant-design'],
+    category: ['react', 'sass', 'ant-design', 'typescript'],
     description:
       'This is the updated version of my portfolio, created using Ant Design principles and components. React with Vite, MDX, and sass also used',
   },

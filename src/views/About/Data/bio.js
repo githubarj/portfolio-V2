@@ -79,8 +79,11 @@ export const skills = [
   {
     title: 'Development',
     items: [
+      'Go',
+      'Typescript',
       'React',
       'Javascript',
+      'PostgreSQL',
       'Material-UI',
       'Ant-Design',
       'Sass',
@@ -91,7 +94,7 @@ export const skills = [
   },
   {
     title: 'Learning',
-    items: ['Rust', 'Java', 'Spring Boot'],
+    items: ['Rust'],
   },
   {
     title: 'Technologies',
