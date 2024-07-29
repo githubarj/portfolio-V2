@@ -11,8 +11,6 @@ import {
 import { Link } from 'react-router-dom';
 import { filterIcons } from '../../views/Projects/Components/filterIcons';
 
-
-
 const optionsLabel = (title, parent) => {
   return React.createElement(
     Link,
