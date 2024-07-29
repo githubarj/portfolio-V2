@@ -4,6 +4,7 @@ import WorkCard from '../utils/WorkCard';
 import { education, experience, skills } from '../../Data/bio';
 import { v4 as uuidv4 } from 'uuid';
 import AltCard from '../utils/AltCard';
+import { FaCopy, FaRegCopy } from 'react-icons/fa';
 const { Text, Title } = Typography;
 
 const Overview = () => {
@@ -38,7 +39,13 @@ const Overview = () => {
                 gap: '10px',
               }}
             >
-              <MdPhone /> 0798320724
+              <MdPhone />
+              <Text
+                copyable={{ icon: <FaCopy  style={{color: '#61DAFB'}} className='w-2' /> }}
+                className='flex gap-1 items-center text-white'
+              >
+                0798320724
+              </Text>
             </Text>
             <Text
               style={{
@@ -48,7 +55,13 @@ const Overview = () => {
                 gap: '10px',
               }}
             >
-              <MdOutlineEmail /> githuba9520@gmail.com
+              <MdOutlineEmail />{' '}
+              <Text
+                className='flex gap-1 items-center'
+                copyable={{ icon: <FaCopy style={{color: '#61DAFB'}} className='w-2' /> }}
+              >
+                githubarj@gmail.com
+              </Text>
             </Text>
           </Flex>
         </Col>
@@ -76,7 +89,6 @@ const Overview = () => {
               <AltCard key={uuidv4()} {...item} />
             ))}
           </Col>
-          
         </Row>
       </Flex>
     </ConfigProvider>
