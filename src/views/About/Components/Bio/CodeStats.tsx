@@ -8,22 +8,21 @@ const { Title, Text, Link } = Typography;
 const CodingStats: React.FC = () => {
 
   const layout = {
-    md : 24,
-    lg : 12,
+    md: 24,
+    lg: 12,
     sm: 24
   }
 
   return (
     <Row gutter={[16, 16]}>
       <Col span={24} className='flex items-center gap-2 '>
-        {' '}
         <Title style={{ color: 'white' }}> Coding Stats </Title>{' '}
         <Text>
-          powered by{' '}
+          powered by
           <Link href='https://wakatime.com/' target='blank'>
             wakatime
           </Link>
-        </Text>{' '}
+        </Text>
       </Col>
       <Col {...layout} className='w-full'>
         <Languages />

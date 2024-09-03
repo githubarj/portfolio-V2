@@ -7,7 +7,7 @@ import caffasso from '../assets/caffasso.png';
 
 export const experience = [
   {
-    title: 'Software Development Graduate Trainee',
+    title: 'System Development Graduate Trainee',
     date: 'Feb 2024 - Present',
     companyName: 'Smart Applications Group',
     logo: smartApps,
