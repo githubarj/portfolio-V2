@@ -10,7 +10,7 @@ const projectsData = [
   {
     image: '/assets/projectImages/changia.png',
     title: 'Changia',
-    link: 'https://changiake.org/home',
+    link: 'https://changiake.netlify.app/home',
     category: ['react', 'sass', 'ant-design', 'tailwind', 'typescript'],
     description: `WIP. Startup that seeks to connect various residential care facilities with donors and volunteers, designed in figma implemented in react`,
   },
