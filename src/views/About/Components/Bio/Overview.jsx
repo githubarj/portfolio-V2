@@ -44,7 +44,7 @@ const Overview = () => {
                 copyable={{ icon: <FaCopy  style={{color: '#61DAFB'}} className='w-2' /> }}
                 className='flex gap-1 items-center text-white'
               >
-                0798320724
+                +44 7365178696
               </Text>
             </Text>
             <Text

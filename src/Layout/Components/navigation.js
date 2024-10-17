@@ -108,7 +108,7 @@ export const aboutItems = [
       {
         key: 'phone',
         icon: React.createElement(FaPhoneAlt),
-        label: '+254 798320724',
+        label: '+44 7365178696',
       },
     ],
   },
@@ -140,7 +140,7 @@ export const contactItems = [
       {
         key: 'phone',
         icon: React.createElement(FaPhoneAlt),
-        label: '+254 798320724',
+        label: '+44 7365178696',
       },
     ],
   },
