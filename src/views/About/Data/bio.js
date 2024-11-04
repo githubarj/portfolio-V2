@@ -8,7 +8,7 @@ import caffasso from '../assets/caffasso.png';
 export const experience = [
   {
     title: 'System Development Graduate Trainee',
-    date: 'Feb 2024 - Present',
+    date: 'Feb 2024 - October 2024',
     companyName: 'Smart Applications Group',
     logo: smartApps,
     location: 'Nairobi, Kenya  (Hybrid)',
